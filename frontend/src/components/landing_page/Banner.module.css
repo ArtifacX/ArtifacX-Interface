@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 .row{
     margin: 0px !important;
 }
@@ -15,6 +15,10 @@
     box-shadow: 0 222px 222px -222px #141403 inset, 0 -222px 222px -222px #141403 inset;
 }
 
+.hiddenContent{
+    visibility: hidden;
+}
+
 .chip{
     background-image: url(../../assets/images/star.png);
     background-size:auto;
@@ -27,4 +31,27 @@
     -moz-box-shadow: 0 222px 222px -222px #141403 inset, 0 -222px 222px -222px #141403 inset;
     -webkit-box-shadow: 0 222px 222px -222px #141403 inset, 0 -222px 222px -222px #141403 inset;
     box-shadow: 0 222px 222px -222px #141403 inset, 0 -222px 222px -222px #141403 inset;
+}
+
+.btn{
+    font-family: 'Poppins';
+    margin-top:-60px; 
+    background-color: #0320B9;
+}
+
+.btn:hover{
+    background-color: rgba(116, 133, 190, 0.5);
+}
+
+@media (max-width: 580px) {
+    .hiddenContent{
+        visibility: visible;
+        display: flex;
+        flex-direction:  column;
+        justify-content: center; 
+        align-items: center;
+    }
+    .chip{
+        display: none;
+    }
 }

@@ -51,7 +51,7 @@ const NavigationBar = () => {
             </NavDropdown> */}
             </Nav>
             <Nav>
-              <Nav.Link className={styles.links} href="home">
+              <Nav.Link className={styles.links} href="connect-wallet">
                 <svg
                   height="30"
                   width="30"

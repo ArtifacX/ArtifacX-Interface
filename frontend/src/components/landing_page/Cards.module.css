@@ -1,0 +1,47 @@
+.wrapper{
+    padding-top: 80px;
+    padding-bottom: 390px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card{
+    top: 30px;
+    position: sticky;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card > h2{
+    padding: 0;
+}
+
+.card > span{
+    display: block;
+    font-size: 14px;
+    color: #0c4eb9;
+}
+
+.card:nth-child(1n){
+    top: 20px;
+}
+.card:nth-child(2n){
+    top: 40px;
+}
+.card:nth-child(3n){
+    top: 60px;
+}
+.card:nth-child(4n){
+    top: 80px;
+}
+.card:nth-child(5n){
+    top: 100px;
+}
+.card:nth-child(6n){
+    top: 120px;
+}
