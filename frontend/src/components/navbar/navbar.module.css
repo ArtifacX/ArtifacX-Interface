@@ -6,9 +6,14 @@
 }
 
 .logo{
-    height: 90px;
+    height: 50px;
 }
 
 .links{
     font-size: 1.2em;
+}
+
+.activelinks{
+    font-size: 1.2em;
+    color: white !important;
 }

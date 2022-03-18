@@ -3,8 +3,10 @@ import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Logo from "../../assets/images/logo.png";
 import Burger from "../../assets/images/burger.png";
 import styles from "./navbar.module.css";
+import {Link, useLocation} from 'react-router-dom';
 
 const NavigationBar = () => {
+    const location = useLocation();
   return (
     <>
       <style type="text/css">
@@ -29,14 +31,17 @@ const NavigationBar = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="home">
+          <Navbar.Brand as={Link} to="/">
             <img className={styles.logo} src={Logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">
-              <Nav.Link className={styles.links} href="home">
+              <Nav.Link className={(location.pathname==='/home')? styles.activelinks: styles.links} as={Link} to="/home">
                 Home
+              </Nav.Link>
+              <Nav.Link className={(location.pathname==='/')? styles.activelinks: styles.links} as={Link} to="/">
+                About
               </Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -51,7 +56,7 @@ const NavigationBar = () => {
             </NavDropdown> */}
             </Nav>
             <Nav>
-              <Nav.Link className={styles.links} href="connect-wallet">
+              <Nav.Link className={styles.links} as={Link} to="/connect-wallet">
                 <svg
                   height="30"
                   width="30"

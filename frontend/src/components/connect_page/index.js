@@ -25,7 +25,7 @@ const ConnectPage = () => {
         <div className={styles.options}>
           <div>
             <p className={styles.subheading}>
-              Connect with one of out available wallet providers or create a new
+              Connect with one of our available wallet providers or create a new
               one.
             </p>
           </div>
@@ -38,6 +38,7 @@ const ConnectPage = () => {
                       src="https://opensea.io/static/images/logos/metamask-alternative.png"
                       height="30px"
                       style={{ marginRight: "20px" }}
+                      alt="MetaMask"
                     />
                   </Col>
                   <Col
@@ -60,6 +61,7 @@ const ConnectPage = () => {
                       src="https://storage.opensea.io/static/wallets/walletlink/walletlink-alternative.png"
                       height="30px"
                       style={{ marginRight: "20px" }}
+                      alt="Coinbase Wallet"
                     />
                   </Col>
                   <Col
@@ -81,6 +83,7 @@ const ConnectPage = () => {
                       src="https://storage.opensea.io/static/wallets/walletconnect/walletconnect-alternative.png"
                       height="30px"
                       style={{ marginRight: "20px" }}
+                      alt="WalletConnect"
                     />
                   </Col>
                   <Col
@@ -102,6 +105,7 @@ const ConnectPage = () => {
                       src="	https://storage.opensea.io/static/wallets/trust/trust-alternative.png"
                       height="30px"
                       style={{ marginRight: "20px" }}
+                      alt="Trust"
                     />
                   </Col>
                   <Col
