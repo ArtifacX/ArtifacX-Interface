@@ -12,7 +12,7 @@ const Banner = () => {
         <Col className={styles.typography} sm={7} style={{height:'100%'}} > 
             <div className={styles.hiddenContent}>
                 <img src={Disc} alt="Chip" height='450px'/>
-                <Button className={styles.btn} variant="dark" size="lg">Explore the marketplace</Button>
+                <Button as={Link} to="/home" className={styles.btn} variant="dark" size="lg">Explore the marketplace</Button>
             </div>
         </Col>
         <Col className={styles.chip} sm={5} style={{height:'100%'}}>

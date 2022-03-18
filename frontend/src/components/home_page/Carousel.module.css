@@ -86,6 +86,16 @@
     width: 100%;
 }
 
+.content1::before{
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: 10;
+    transform: translate3d(0px, 0px, 0px);
+    border-radius: 12px;
+    background: linear-gradient(142deg, rgba(41, 41, 41, 0.7) 0%, rgba(41, 41, 41, 0) 50%);
+}
+
 .content2{
     height: 100%;
     width: 100%;
@@ -179,6 +189,7 @@
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x proximity;
+        margin-bottom: 20px;
     }
     
     .content3{
