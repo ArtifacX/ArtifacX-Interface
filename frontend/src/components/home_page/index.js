@@ -7,6 +7,9 @@ const HomePage = () => {
     <>
       <NavigationBar />
       <CarouselBanner />
+      <div style={{height: '100vh'}}>
+
+      </div>
     </>
   );
 };

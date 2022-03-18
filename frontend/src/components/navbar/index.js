@@ -29,6 +29,7 @@ const NavigationBar = () => {
         collapseOnSelect
         expand="md"
         variant="dark"
+        sticky="top"
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -39,6 +40,9 @@ const NavigationBar = () => {
             <Nav className="m-auto">
               <Nav.Link className={(location.pathname==='/home')? styles.activelinks: styles.links} as={Link} to="/home">
                 Home
+              </Nav.Link>
+              <Nav.Link className={(location.pathname==='/asset/create')? styles.activelinks: styles.links} as={Link} to="/asset/create">
+                Create
               </Nav.Link>
               <Nav.Link className={(location.pathname==='/')? styles.activelinks: styles.links} as={Link} to="/">
                 About

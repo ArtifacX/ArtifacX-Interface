@@ -1,6 +1,6 @@
 .wrapper{
     padding-top: 80px;
-    padding-bottom: 390px;
+    padding-bottom: 423px;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -28,20 +28,20 @@
 }
 
 .card:nth-child(1n){
-    top: 20px;
+    top: 90px;
 }
 .card:nth-child(2n){
-    top: 40px;
+    top: 110px;
 }
 .card:nth-child(3n){
-    top: 60px;
+    top: 130px;
 }
 .card:nth-child(4n){
-    top: 80px;
+    top: 150px;
 }
 .card:nth-child(5n){
-    top: 100px;
+    top: 170px;
 }
 .card:nth-child(6n){
-    top: 120px;
+    top: 190px;
 }

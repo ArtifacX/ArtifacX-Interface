@@ -188,6 +188,7 @@
         min-width: 32%;
         padding-left: 20px;
         scroll-snap-align: start;
+        -webkit-overflow-scrolling: touch;
     }
     
     .content3:last-child{

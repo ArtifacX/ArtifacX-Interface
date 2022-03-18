@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 .navbar{
-    background-color: #141403;
     font-family: 'Poppins';
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(20px);
+    transform: translateZ(0px);
 }
 
 .logo{
