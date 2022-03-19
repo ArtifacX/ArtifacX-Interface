@@ -7,7 +7,7 @@ const Cards = () => {
       <div className={styles.wrapper}>
         <div className={styles.card}>
           <h2>
-            <span>Project #1</span>Title of the Project
+            #1
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -18,7 +18,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            <span>Project #2</span>Title of the Project
+             #2
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -29,7 +29,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            <span>Project #3</span>Title of the Project
+            #3
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -40,7 +40,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            <span>Project #4</span>Title of the Project
+            #4
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -51,7 +51,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            <span>Project #5</span>Title of the Project
+            #5
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -62,7 +62,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            <span>Project #6</span>Title of the Project
+            #6
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,

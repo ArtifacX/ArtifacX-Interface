@@ -4,6 +4,7 @@ import {Route, Routes} from 'react-router-dom';
 import HomePage from './components/home_page';
 import ConnectPage from './components/connect_page';
 import CreatePage from './components/create_page';
+import AssetPage from './components/asset_page';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/home" element={<HomePage />} />
       <Route path="/connect-wallet" element={<ConnectPage />} />
       <Route path="/asset/create" element={<CreatePage />} />
+      <Route path="/assets/:address" element={<AssetPage />} />
     </Routes>
   );
 }

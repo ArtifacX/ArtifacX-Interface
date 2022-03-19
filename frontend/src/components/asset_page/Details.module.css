@@ -1,0 +1,13 @@
+.contentContainer{
+    padding: 8px 0px 0px 0px;
+}
+
+.summary{
+    height: fit-content;
+    /* background-color: aliceblue; */
+}
+
+.main{
+    height: fit-content;
+    /* background-color: aqua; */
+}

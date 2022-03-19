@@ -44,6 +44,9 @@ const NavigationBar = () => {
               <Nav.Link className={(location.pathname==='/asset/create')? styles.activelinks: styles.links} as={Link} to="/asset/create">
                 Create
               </Nav.Link>
+              <Nav.Link className={(location.pathname==='/assets/someid')? styles.activelinks: styles.links} as={Link} to="/assets/someid">
+                Item
+              </Nav.Link>
               <Nav.Link className={(location.pathname==='/')? styles.activelinks: styles.links} as={Link} to="/">
                 About
               </Nav.Link>

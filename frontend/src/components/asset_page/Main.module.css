@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400,600&display=swap');
+
+.mainContainer{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.collection > h1{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(32, 129, 226);
+}
+
+.name > h1{
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.owner > h1{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(138, 147, 155);
+}
+
+@media (max-width: 995px){
+    .mainContainer{
+        margin: 0px;
+    }
+    .details{
+        display: none;
+    }
+}
