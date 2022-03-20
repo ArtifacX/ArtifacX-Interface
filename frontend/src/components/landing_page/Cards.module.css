@@ -8,13 +8,16 @@
 .card{
     top: 30px;
     position: sticky;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(29, 29, 29);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    color: #333;
+    color: white;
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 20px;
+    font-family: 'Poppins';
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(4px);
+    transform: translateZ(0px);
 }
 
 .card > h2{
@@ -44,4 +47,10 @@
 }
 .card:nth-child(6n){
     top: 190px;
+}
+
+@media (max-width: 550px){
+    .card{
+        margin: 0px 5px 20px 5px;
+    }
 }

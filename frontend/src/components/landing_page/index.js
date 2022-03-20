@@ -3,6 +3,8 @@ import NavigationBar from '../navbar';
 import Banner from './Banner';
 import Divider from './Divider';
 import Cards from './Cards';
+import Pattern from '../../assets/images/pattern.png';
+import Footer from './Footer';
 
 const LandingPage = () => {
   return (
@@ -13,7 +15,10 @@ const LandingPage = () => {
         <Divider delay={85} adjust="-20px 0px 0px 0px" angle="-2"/>
         <Divider delay={150} adjust="-30px 0px 0px 0px" angle="4"/>
       </div>
-      <Cards />
+      <div style={{width: '100%', backgroundImage: `url(${Pattern})`, backgroundRepeat: 'repeat'}}>
+        <Cards />
+      </div>
+      <Footer />
     </>
   );
 };
