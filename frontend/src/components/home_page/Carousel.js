@@ -89,7 +89,7 @@ const CarouselBanner = () => {
         </div>
         <div
           className={
-            count === 2
+            count === 1
               ? `${styles.rightBtn} ${styles.hide}`
               : `${styles.rightBtn}`
           }
@@ -118,30 +118,6 @@ const CarouselBanner = () => {
           >
             <div className={styles.id1}>
               <div className={styles.content1}></div>
-            </div>
-            <div className={styles.id2}>
-              <div className={styles.content2}>
-                <div className={styles.subcontent2}></div>
-                <div className={styles.subcontent2}></div>
-              </div>
-            </div>
-            <div className={styles.id2}>
-              <div className={styles.content2}>
-                <div className={styles.subcontent2}></div>
-                <div className={styles.subcontent2}></div>
-              </div>
-            </div>
-            <div className={styles.id2}>
-              <div className={styles.content2}>
-                <div className={styles.subcontent2}></div>
-                <div className={styles.subcontent2}></div>
-              </div>
-            </div>
-            <div className={styles.id2}>
-              <div className={styles.content2}>
-                <div className={styles.subcontent2}></div>
-                <div className={styles.subcontent2}></div>
-              </div>
             </div>
             <div className={styles.id2}>
               <div className={styles.content2}>

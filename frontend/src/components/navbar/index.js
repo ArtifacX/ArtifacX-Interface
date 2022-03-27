@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import Logo from "../../assets/images/logo.png";
 import Burger from "../../assets/images/burger.png";
 import styles from "./navbar.module.css";
@@ -44,8 +44,17 @@ const NavigationBar = () => {
               <Nav.Link className={(location.pathname==='/asset/create')? styles.activelinks: styles.links} as={Link} to="/asset/create">
                 Create
               </Nav.Link>
+              <Nav.Link className={(location.pathname==='/assets/someid/sell')? styles.activelinks: styles.links} as={Link} to="/assets/someid/sell">
+                Sell
+              </Nav.Link>
               <Nav.Link className={(location.pathname==='/assets/someid')? styles.activelinks: styles.links} as={Link} to="/assets/someid">
                 Item
+              </Nav.Link>
+              <Nav.Link className={(location.pathname==='/collection/collectionname')? styles.activelinks: styles.links} as={Link} to="/collection/collectionname">
+                Collection
+              </Nav.Link>
+              <Nav.Link className={(location.pathname==='/account')? styles.activelinks: styles.links} as={Link} to="/account">
+                Profile
               </Nav.Link>
               <Nav.Link className={(location.pathname==='/')? styles.activelinks: styles.links} as={Link} to="/">
                 About

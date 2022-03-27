@@ -8,9 +8,8 @@ const HomePage = () => {
     <>
       <NavigationBar />
       <CarouselBanner />
-      <Collections />
       <div style={{height: '100vh'}}>
-
+        <Collections />
       </div>
     </>
   );
