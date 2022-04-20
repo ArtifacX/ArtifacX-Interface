@@ -1,9 +1,44 @@
-import React from "react";
+import React,{useState} from "react";
+import {useNavigate} from 'react-router-dom';
 import NavigationBar from "../navbar";
 import { Container, Card, ListGroup, Row, Col } from "react-bootstrap";
 import styles from "./index.module.css";
+import {ethers} from 'ethers';
 
 const ConnectPage = () => {
+  const [defaultAccount, setDefaultAccount] = useState('');
+  const [accountBalance, setAccountBalance] = useState(0);
+  const history = useNavigate();
+
+  const connectWalletHandler = async () => {
+    if(typeof window.ethereum !== undefined) {
+      const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
+      console.log(accounts[0]);
+      accountChangeHandler(accounts[0]);
+    }else{
+      console.log('Install Metamask!');
+    }
+  }
+
+  const accountChangeHandler = async(address) => {
+    setDefaultAccount(address);
+    await getUserBalance(address.toString());
+    history('/account');
+  }
+
+  const chainChangeHandler = () => {
+    window.location.reload();
+  }
+
+  const getUserBalance = async(address) => {
+    const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address, 'latest']});
+    console.log(ethers.utils.formatEther(balance));
+    setAccountBalance(ethers.utils.formatEther(balance));
+  }
+
+  window.ethereum.on('accountChanged', accountChangeHandler);
+  window.ethereum.on('chainChanged', chainChangeHandler);
+
   return (
     <>
       <style type="text/css">
@@ -31,7 +66,7 @@ const ConnectPage = () => {
           </div>
           <Card>
             <ListGroup variant="flush">
-              <ListGroup.Item className={styles.wallet} style={{cursor: 'pointer'}}>
+              <ListGroup.Item className={styles.wallet} style={{cursor: 'pointer'}} onClick={connectWalletHandler}>
                 <Row>
                   <Col sm={1}>
                     <img
