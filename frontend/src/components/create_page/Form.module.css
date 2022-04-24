@@ -136,6 +136,16 @@
     border-radius: 10px;
 }
 
+.preview_img{
+    height: 257px;
+    width: 350px;
+    border: 3px dashed rgb(204, 204, 204);
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 765px){
     .formWrapper{
         max-width: 80%;
@@ -155,4 +165,5 @@
     .filepicker{
         width: 330px;
     }
+
 }
