@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 24px;
 }
 
 .heading{
@@ -20,6 +19,7 @@
     font-weight: 400;
     font-family: 'Poppins';
     color: rgb(138, 147, 155);
+    text-align: center;
 }
 
 .wallet{

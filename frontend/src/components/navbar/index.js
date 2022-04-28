@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { UnsupportedChainIdError } from "@web3-react/core";
@@ -9,12 +10,14 @@ import styles from "./navbar.module.css";
 import { Link, useLocation } from 'react-router-dom';
 import { useActiveWeb3React } from "../../hooks/useWeb3";
 import { NETWORK_LABELS,ALL_SUPPORTED_CHAIN_IDS } from '../../constants/chains';
+import WalletModal from "../wallet_modal";
 
 const NavigationBar = () => {
 
   const location = useLocation();
   const { account,error,deactivate } = useActiveWeb3React();
   const [show,setShow] = useState(false);
+  const [opened, setOpened] = useState(false);
 
   const deactivateWallet = () => {
     setShow(false);
@@ -22,6 +25,9 @@ const NavigationBar = () => {
     deactivate();
   }
 
+  const walletClickHandler = () => {
+    setOpened((prevValue) => {return !prevValue})
+  }
   
   return (
     <>
@@ -40,6 +46,11 @@ const NavigationBar = () => {
             }
         `}
       </style>
+      {
+        ReactDOM.createPortal(
+          <WalletModal isOpened={opened} eventTrigger={walletClickHandler}/>, document.getElementById('modal')
+        )
+      }
       <Navbar
         className={styles.navbar}
         collapseOnSelect
@@ -87,7 +98,7 @@ const NavigationBar = () => {
               </NavDropdown.Item>
             </NavDropdown> */}
             </Nav>
-            <Nav>
+            <Nav style={{'color':'#C3C3C2'}}>
               {
                 error ? `${error instanceof UnsupportedChainIdError ? `Switch to {NETWORK_LABELS[ALL_SUPPORTED_CHAIN_IDS[0]]}` : ` Connect Wallet`}`
                 : account 
@@ -99,7 +110,7 @@ const NavigationBar = () => {
                 : `Switch to ${NETWORK_LABELS[ALL_SUPPORTED_CHAIN_IDS[0]]}`}
             </Nav>
             <Nav>
-              <Nav.Link className={styles.links} as={Link} to="/connect-wallet">
+              <Nav.Link className={styles.links} onClick={walletClickHandler} >
                 <svg
                   height="30"
                   width="30"
