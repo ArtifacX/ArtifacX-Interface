@@ -1,0 +1,17 @@
+export const CERTIFICATION_REGISTRY_ADDRESS = {
+  1: "",
+  5: "",
+  1337: "0xd18b44dbb507Ced23D90ba66c493c0271B0c4886",
+};
+
+export const MARKETX_ADDRESS = {
+  1: "",
+  5: "",
+  1337: "0x9eA295155fD22b1134ff958C57dF5F0042F13BF6",
+};
+
+export const ARTIFACTORY_ADDRESS = {
+  1: "",
+  5: "",
+  1337: "0x3c48894Eb401593Cf0885D714b61d12bE153F6E0",
+};

@@ -1,43 +1,60 @@
-import React,{useState} from "react";
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import NavigationBar from "../navbar";
 import { Container, Card, ListGroup, Row, Col } from "react-bootstrap";
+import { useActiveWeb3React, useEagerConnect } from "../../hooks/useWeb3";
 import styles from "./index.module.css";
-import {ethers} from 'ethers';
+import { UnsupportedChainIdError } from "@web3-react/core";
+import { SUPPORTED_WALLETS } from "../../constants/wallet";
 
 const ConnectPage = () => {
-  const [defaultAccount, setDefaultAccount] = useState('');
-  const [accountBalance, setAccountBalance] = useState(0);
-  const history = useNavigate();
 
-  const connectWalletHandler = async () => {
-    if(typeof window.ethereum !== undefined) {
-      const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
-      console.log(accounts[0]);
-      accountChangeHandler(accounts[0]);
-    }else{
-      console.log('Install Metamask!');
+  const { account, activate, error, chainId } = useActiveWeb3React();
+
+  const activateConnector = (connector) => {
+    if (connector) {
+      activate(connector);
     }
   }
 
-  const accountChangeHandler = async(address) => {
-    setDefaultAccount(address);
-    await getUserBalance(address.toString());
-    history('/account');
-  }
+  const WalletButtons = Object.keys(SUPPORTED_WALLETS).map((key) => {
 
-  const chainChangeHandler = () => {
-    window.location.reload();
+    const option = SUPPORTED_WALLETS[key];
+    return (
+      <ListGroup.Item
+        className={styles.wallet}
+        key={option.name}
+        style={{ cursor: 'pointer' }}
+        onClick={account ? undefined : error ? (error instanceof UnsupportedChainIdError ? undefined : () => { activateConnector(option.connector) }) : () => { activateConnector(option.connector) }}>
+        <Row>
+          <Col sm={1}>
+            <img
+              src={option.iconURL}
+              height="30px"
+              style={{ marginRight: "20px" }}
+              alt={option.name}
+            />
+          </Col>
+          <Col
+            sm={11}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div>{option.name}</div>
+            {
+              option.name == "Metmask"
+              &&
+              <div className={styles.tag}>Popular</div>
+            }
+          </Col>
+        </Row>
+      </ListGroup.Item>
+    )
   }
-
-  const getUserBalance = async(address) => {
-    const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address, 'latest']});
-    console.log(ethers.utils.formatEther(balance));
-    setAccountBalance(ethers.utils.formatEther(balance));
-  }
-
-  window.ethereum.on('accountChanged', accountChangeHandler);
-  window.ethereum.on('chainChanged', chainChangeHandler);
+  )
 
   return (
     <>
@@ -66,96 +83,7 @@ const ConnectPage = () => {
           </div>
           <Card>
             <ListGroup variant="flush">
-              <ListGroup.Item className={styles.wallet} style={{cursor: 'pointer'}} onClick={connectWalletHandler}>
-                <Row>
-                  <Col sm={1}>
-                    <img
-                      src="https://opensea.io/static/images/logos/metamask-alternative.png"
-                      height="30px"
-                      style={{ marginRight: "20px" }}
-                      alt="MetaMask"
-                    />
-                  </Col>
-                  <Col
-                    sm={11}
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div>MetaMask</div>
-                    <div className={styles.tag}>Popular</div>
-                  </Col>
-                </Row>
-              </ListGroup.Item>
-              <ListGroup.Item className={styles.wallet} style={{backgroundColor: 'rgba(0,0,0,0.85)', cursor:'not-allowed'}}>
-                <Row>
-                  <Col sm={1}>
-                    <img
-                      src="https://storage.opensea.io/static/wallets/walletlink/walletlink-alternative.png"
-                      height="30px"
-                      style={{ marginRight: "20px" }}
-                      alt="Coinbase Wallet"
-                    />
-                  </Col>
-                  <Col
-                    sm={11}
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div>Coinbase Wallet</div>
-                  </Col>
-                </Row>
-              </ListGroup.Item>
-              <ListGroup.Item className={styles.wallet} style={{backgroundColor: 'rgba(0,0,0,0.85)', cursor:'not-allowed'}}>
-                <Row>
-                  <Col sm={1}>
-                    <img
-                      src="https://storage.opensea.io/static/wallets/walletconnect/walletconnect-alternative.png"
-                      height="30px"
-                      style={{ marginRight: "20px" }}
-                      alt="WalletConnect"
-                    />
-                  </Col>
-                  <Col
-                    sm={11}
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div>WalletConnect</div>
-                  </Col>
-                </Row>
-              </ListGroup.Item>
-              <ListGroup.Item className={styles.wallet} style={{backgroundColor: 'rgba(0,0,0,0.85)', cursor:'not-allowed'}}>
-                <Row>
-                  <Col sm={1}>
-                    <img
-                      src="	https://storage.opensea.io/static/wallets/trust/trust-alternative.png"
-                      height="30px"
-                      style={{ marginRight: "20px" }}
-                      alt="Trust"
-                    />
-                  </Col>
-                  <Col
-                    sm={11}
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div>Trust</div>
-                    <div className={styles.tag}>mobile only</div>
-                  </Col>
-                </Row>
-              </ListGroup.Item>
+              {WalletButtons}
             </ListGroup>
           </Card>
         </div>

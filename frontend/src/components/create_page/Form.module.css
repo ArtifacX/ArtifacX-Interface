@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 .container{
     margin: 24px 0px 0px 0px;
@@ -12,7 +12,7 @@
     font-weight: 600;
     font-size: 40px;
     color: rgb(255, 255, 255);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .required{
@@ -31,14 +31,14 @@
     font-weight: 600;
     font-size: 16px;
     color: rgb(229, 232, 235);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .labelContainer > div {
     font-weight: 500;
     font-size: 12px;
     color: rgb(138, 147, 155);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .filepicker{
@@ -59,7 +59,7 @@
     border: none;
     padding: 10px;
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .nameField > input:hover{
@@ -78,7 +78,7 @@
     border: none;
     padding: 10px;
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .linkField > input:hover{
@@ -96,7 +96,7 @@
     border: none;
     padding: 10px;
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .descriptionField > textarea:hover{
@@ -115,7 +115,7 @@
     border: none;
     padding: 10px;
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .blockchainField > select:hover{
@@ -127,7 +127,7 @@
 }
 
 .btn{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
     padding: 12px 20px;

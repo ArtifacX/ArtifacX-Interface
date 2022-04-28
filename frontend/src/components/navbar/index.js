@@ -1,12 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
+import { UnsupportedChainIdError } from "@web3-react/core";
+import { addressShortner} from "../../utils";
 import Logo from "../../assets/images/logo.png";
 import Burger from "../../assets/images/burger.png";
 import styles from "./navbar.module.css";
-import {Link, useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useActiveWeb3React } from "../../hooks/useWeb3";
+import { NETWORK_LABELS,ALL_SUPPORTED_CHAIN_IDS } from '../../constants/chains';
 
 const NavigationBar = () => {
-    const location = useLocation();
+
+  const location = useLocation();
+  const { account,error,deactivate } = useActiveWeb3React();
+  const [show,setShow] = useState(false);
+
+  const deactivateWallet = () => {
+    setShow(false);
+    // sessionStorage.setItem("disconnected","true");
+    deactivate();
+  }
+
+  
   return (
     <>
       <style type="text/css">
@@ -38,25 +54,25 @@ const NavigationBar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="m-auto">
-              <Nav.Link className={(location.pathname==='/home')? styles.activelinks: styles.links} as={Link} to="/home">
+              <Nav.Link className={(location.pathname === '/home') ? styles.activelinks : styles.links} as={Link} to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/asset/create')? styles.activelinks: styles.links} as={Link} to="/asset/create">
+              <Nav.Link className={(location.pathname === '/asset/create') ? styles.activelinks : styles.links} as={Link} to="/asset/create">
                 Create
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/assets/someid/sell')? styles.activelinks: styles.links} as={Link} to="/assets/someid/sell">
+              <Nav.Link className={(location.pathname === '/assets/someid/sell') ? styles.activelinks : styles.links} as={Link} to="/assets/someid/sell">
                 Sell
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/assets/someid')? styles.activelinks: styles.links} as={Link} to="/assets/someid">
+              <Nav.Link className={(location.pathname === '/assets/someid') ? styles.activelinks : styles.links} as={Link} to="/assets/someid">
                 Item
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/collection/collectionname')? styles.activelinks: styles.links} as={Link} to="/collection/collectionname">
+              <Nav.Link className={(location.pathname === '/collection/collectionname') ? styles.activelinks : styles.links} as={Link} to="/collection/collectionname">
                 Collection
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/account')? styles.activelinks: styles.links} as={Link} to="/account">
+              <Nav.Link className={(location.pathname === '/account') ? styles.activelinks : styles.links} as={Link} to="/account">
                 Profile
               </Nav.Link>
-              <Nav.Link className={(location.pathname==='/')? styles.activelinks: styles.links} as={Link} to="/">
+              <Nav.Link className={(location.pathname === '/') ? styles.activelinks : styles.links} as={Link} to="/">
                 About
               </Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -70,6 +86,17 @@ const NavigationBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown> */}
+            </Nav>
+            <Nav>
+              {
+                error ? `${error instanceof UnsupportedChainIdError ? `Switch to {NETWORK_LABELS[ALL_SUPPORTED_CHAIN_IDS[0]]}` : ` Connect Wallet`}`
+                : account 
+                ? (
+                  <div className="w-full flex items-center">
+                    {addressShortner(account)}
+                  </div>
+                  )
+                : `Switch to ${NETWORK_LABELS[ALL_SUPPORTED_CHAIN_IDS[0]]}`}
             </Nav>
             <Nav>
               <Nav.Link className={styles.links} as={Link} to="/connect-wallet">
@@ -88,6 +115,7 @@ const NavigationBar = () => {
                 </svg>
               </Nav.Link>
             </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

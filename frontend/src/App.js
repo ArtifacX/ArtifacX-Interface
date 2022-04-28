@@ -8,8 +8,13 @@ import AssetPage from './components/asset_page';
 import SellPage from './components/sell_page';
 import CollectionPage from './components/collection_page';
 import ProfilePage from './components/profile_page';
+import { useActiveWeb3React } from './hooks/useWeb3';
 
 function App() {
+
+  const {account} = useActiveWeb3React();
+
+
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />

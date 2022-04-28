@@ -2,60 +2,82 @@ import React, { useState } from 'react';
 import styles from './Form.module.css';
 import { Button, Container } from 'react-bootstrap';
 import axios from 'axios';
+import { useArtifactory, useCertificationRegistry } from '../../hooks/useContract';
+import { useActiveWeb3React } from '../../hooks/useWeb3';
+import { utils } from 'ethers';
+import { useCallback } from 'react';
 
 
 const Form = () => {
 
     const [submitting, setSubmitting] = useState(false);
-    // const [file, setFile] = useState('');
+    const { account } = useActiveWeb3React();
+    const factory = useArtifactory();
 
-    // function handleFileInput(e) {
-    //     console.log(e.target.files);
-    //     setFile(URL.createObjectURL(e.target.files[0]));
-    // }
+    const uploadPinata = (data) => {
 
-    // const removeSelectedFile = () => {
-    //     setFile();
-    // };
+        JSON.stringify(data);
+        setSubmitting(true);
 
-    const handleSubmit = (event) => {
+        const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
+        return axios.post(url, data, {
+            headers: {
+                'Content-Type': 'application/json',
+                pinata_api_key: process.env.REACT_APP_APIKEY,
+                pinata_secret_api_key: process.env.REACT_APP_APISECRET
+            }
+        });
+    }
+
+    const deployArtifactCall = useCallback(
+        (data) => {
+            console.log(data);
+            if(factory){
+                console.log("uploading to contract");
+                factory?.deployArtifact(data.name, data.hash, data.price).then((response)=>{
+                    console.log(response);
+                }).catch(err => {
+                    console.error(err);
+                })
+                ;  
+            } else {
+                console.log("Could not load factory contract");
+            }
+        },
+        [factory]
+    )
+
+    const handleSubmit = async(event) => {
         event.preventDefault();
         const pinataContent = {
             "name": event.target.name.value,
             "imgURL": event.target.imgURL.value,
             "description": event.target.description.value,
-            "link": event.target.link.value
-        } 
-        
+            "link": event.target.link.value,
+            "price": event.target.price.value
+        }
+
         const pinataMetadata = {
             "name": event.target.name.value
-        }  
+        }
 
         const data = {
             pinataContent,
             pinataMetadata
         }
 
-        JSON.stringify(data);
-        setSubmitting(true);
+        const response = await uploadPinata(data);
+        if (response.status != 200) {
+            console.error("Could not pin to IPFS");
+        } else {
+            const data = {
+                hash : response.data.IpfsHash,
+                price : utils.parseEther(event.target.price.value),
+                name : event.target.name.value
+            }
+            deployArtifactCall(data);
+        }
 
-        const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
-        return axios
-            .post(url, data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    pinata_api_key: process.env.REACT_APP_APIKEY,
-                    pinata_secret_api_key: process.env.REACT_APP_APISECRET
-                }
-            })
-            .then(function (response) {
-                console.log(response)
-                setSubmitting(false)
-            })
-            .catch(function (error) {
-                console.err(error)
-                setSubmitting(false)
-            });
     }
 
     return (
@@ -82,7 +104,7 @@ const Form = () => {
                         </div> */}
                             <div className={styles.fieldContainer}>
                                 <div className={styles.labelContainer}>
-                                    <label for="image url">Image URL <span className={styles.required}>*</span></label>
+                                    <label htmlFor="image url">Image URL <span className={styles.required}>*</span></label>
                                 </div>
                                 <div className={styles.nameField}>
                                     <input id="image_url" name={"imgURL"} type="text" placeholder='Image URL' />
@@ -90,7 +112,7 @@ const Form = () => {
                             </div>
                             <div className={styles.fieldContainer}>
                                 <div className={styles.labelContainer}>
-                                    <label for="name">Name <span className={styles.required}>*</span></label>
+                                    <label htmlFor="name">Name <span className={styles.required}>*</span></label>
                                 </div>
                                 <div className={styles.nameField}>
                                     <input id="name" name={"name"} type="text" placeholder='Item name' />
@@ -98,7 +120,7 @@ const Form = () => {
                             </div>
                             <div className={styles.fieldContainer}>
                                 <div className={styles.labelContainer}>
-                                    <label for="link">External link</label>
+                                    <label htmlFor="link">External link</label>
                                     <div>ArtifacX will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details.</div>
                                 </div>
                                 <div className={styles.linkField}>
@@ -107,11 +129,19 @@ const Form = () => {
                             </div>
                             <div className={styles.fieldContainer}>
                                 <div className={styles.labelContainer}>
-                                    <label for="description">Description</label>
+                                    <label htmlFor="description">Description</label>
                                     <div>The description will be included on the item's detail page underneath its image.</div>
                                 </div>
                                 <div className={styles.descriptionField}>
                                     <textarea id="description" name={"text"} type="text" rows={4} placeholder='Provide a detailed description of yout item.' />
+                                </div>
+                            </div>
+                            <div className={styles.fieldContainer}>
+                                <div className={styles.labelContainer}>
+                                    <label htmlFor="price">Price (ETH)</label>
+                                </div>
+                                <div className={styles.linkField}>
+                                    <input id="price" name={"price"} type="number" min="0" />
                                 </div>
                             </div>
                             <Button type='submit' className={styles.btn} size='large' disabled={submitting}>Create</Button>
