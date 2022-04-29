@@ -1,35 +1,74 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useArtifactory } from "../../hooks/useContract";
 import NavigationBar from "../navbar";
 import CarouselBanner from "./Carousel";
 import Collections from "./Collections";
+import axios from 'axios';
 
 const HomePage = () => {
 
   const factory = useArtifactory();
-  const [tokens,setTokens] = useState([]);
+  const [N_TOKENS, setNTokens] = useState(undefined);
 
-  // useEffect(()=>{
-  //   console.log(factory);
-  //   let tx = factory?.tokens().then((response)=>{
-  //     console.log(response);
-  //   });
+  const getURIs = async () => {
+    let uri = [];
+    for (var i = 0; i < N_TOKENS; i++) {
+      uri.push(await factory?.getURIByIndex(i));
+    }
+    uri = await Promise.all(uri);
+    console.log(uri);
+    return uri;
+  }
 
-  // },[factory])
+  const TOKENS = useMemo(() => {
+    if (N_TOKENS != undefined) {
+      return getURIs();
+    }
+  }, [N_TOKENS]);
+
+  const getDataFromPinata = async () => {
+    let t = await TOKENS;
+    let metadata = await Promise.all (
+      t?.map(async(tokenURI)=>{
+        let url = process.env.REACT_APP_BASEURL+tokenURI;
+        console.log(url);
+        return axios
+          .get(url, {
+            headers: {
+              pinata_api_key: process.env.REACT_APP_APIKEY,
+              pinata_secret_api_key: process.env.REACT_APP_APISECRET
+            }
+          });
+      }) 
+    )
+
+    console.log(metadata);
+    return metadata;
+  };
+
+  const METADATA = useMemo(()=>{
+    if (N_TOKENS != undefined) {
+      return getDataFromPinata();
+    }
+  },[N_TOKENS]);
 
 
 
 
+useEffect(async () => {
+  let n_tokens = await factory?.N_TOKENS();
+  setNTokens(n_tokens?.toNumber());
+}, [factory]);
 
-  return (
-    <>
-      <NavigationBar />
-      <CarouselBanner />
-      <div style={{height: '100vh'}}>
-        <Collections />
-      </div>
-    </>
-  );
+return (
+  <>
+    <NavigationBar />
+    <CarouselBanner />
+    <div style={{ height: '100vh' }}>
+      <Collections />
+    </div>
+  </>
+);
 };
 
 export default HomePage;
