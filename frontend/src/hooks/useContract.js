@@ -5,6 +5,7 @@ import { CERTIFICATION_REGISTRY_ADDRESS, MARKETX_ADDRESS, ARTIFACTORY_ADDRESS } 
 import CERTIFICATION_REGISTRY_ABI from "../abis/CertificationRegistry.json";
 import MARKETX_ABI from "../abis/MarketX.json";
 import ARTIFACTORY_ABI from "../abis/ArtiFactory.json";
+import ARTIFACT_ABI from "../abis/Artifact.json"
 
 
 // returns null on errors
@@ -37,4 +38,8 @@ export function useMarketX(withSignerIfPossible) {
 
 export function useArtifactory(withSignerIfPossible) {
   return useContract(ARTIFACTORY_ADDRESS, ARTIFACTORY_ABI.abi, withSignerIfPossible);
+}
+
+export function useArtifact(ARTIFACT_ADDRESS,withSignerIfPossible) {
+  return useContract(ARTIFACT_ADDRESS, ARTIFACT_ABI.abi, withSignerIfPossible);
 }

@@ -49,34 +49,39 @@ const Form = () => {
 
     const handleSubmit = async(event) => {
         event.preventDefault();
-        const pinataContent = {
-            "name": event.target.name.value,
-            "imgURL": event.target.imgURL.value,
-            "description": event.target.description.value,
-            "link": event.target.link.value,
-            "price": event.target.price.value
-        }
+        // const pinataContent = {
+        //     "name": event.target.name.value,
+        //     "imgURL": event.target.imgURL.value,
+        //     "description": event.target.description.value,
+        //     "link": event.target.link.value,
+        //     "price": event.target.price.value
+        // }
 
-        const pinataMetadata = {
-            "name": event.target.name.value
-        }
+        // const pinataMetadata = {
+        //     "name": event.target.name.value
+        // }
 
-        const data = {
-            pinataContent,
-            pinataMetadata
-        }
+        // const data = {
+        //     pinataContent,
+        //     pinataMetadata
+        // }
 
-        const response = await uploadPinata(data);
-        if (response.status != 200) {
-            console.error("Could not pin to IPFS");
-        } else {
+        // const response = await uploadPinata(data);
+        // if (response.status != 200) {
+        //     console.error("Could not pin to IPFS");
+        // } else {
+            // const data = {
+            //     hash : response.data.IpfsHash,
+            //     price : utils.parseEther(event.target.price.value),
+            //     name : event.target.name.value
+            // }
             const data = {
-                hash : response.data.IpfsHash,
-                price : utils.parseEther(event.target.price.value),
-                name : event.target.name.value
+                hash : "QmbXUCR2xDBNnfUwPSG5qp2CA3X2dBcKitf4RGZQeZzirz",
+                price : utils.parseEther("2"),
+                name : "Airmax"
             }
             deployArtifactCall(data);
-        }
+        // }
 
     }
 

@@ -3,7 +3,8 @@ import styles from "./Summary.module.css";
 import { Card } from "react-bootstrap";
 import { Accordion } from "@mantine/core";
 
-const Summary = () => {
+const Summary = (props) => {
+
   return (
     <>
       <style type="text/css">
@@ -46,10 +47,10 @@ const Summary = () => {
               <h1>Some Collection Name</h1>
             </div>
             <div className={styles.name}>
-              <h1>#Name</h1>
+              <h1>{props.name}</h1>
             </div>
             <div className={styles.owner}>
-              <h1>Owner Name</h1>
+              <h1>{props.hodler}</h1>
             </div>
           </div>
         </div>
@@ -59,19 +60,17 @@ const Summary = () => {
             <Card.Body>
               <Accordion iconPosition="right" initialItem={0} multiple>
                 <Accordion.Item label="Description">
-                  Colors, fonts, shadows and many other parts are customizable
-                  to fit your design needs
+                  {props.description}
                 </Accordion.Item>
 
                 <Accordion.Item label="External Link">
-                  Configure components appearance and behavior with vast amount
-                  of settings or overwrite any part of component styles
+                  {props.externalLink}
                 </Accordion.Item>
 
-                <Accordion.Item label="Details">
+                {/* <Accordion.Item label="Details">
                   With new :focus-visible pseudo-class focus ring appears only
                   when user navigates with keyboard
-                </Accordion.Item>
+                </Accordion.Item> */}
               </Accordion>
             </Card.Body>
           </Card>

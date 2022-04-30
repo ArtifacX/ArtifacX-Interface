@@ -71,10 +71,10 @@ const NavigationBar = () => {
               <Nav.Link className={(location.pathname === '/asset/create') ? styles.activelinks : styles.links} as={Link} to="/asset/create">
                 Create
               </Nav.Link>
-              <Nav.Link className={(location.pathname === '/assets/someid/sell') ? styles.activelinks : styles.links} as={Link} to="/assets/someid/sell">
+              <Nav.Link className={(location.pathname === '/assets/address/sell') ? styles.activelinks : styles.links} as={Link} to="/assets/address/sell">
                 Sell
               </Nav.Link>
-              <Nav.Link className={(location.pathname === '/assets/someid') ? styles.activelinks : styles.links} as={Link} to="/assets/someid">
+              <Nav.Link className={(location.pathname === '/assets/address') ? styles.activelinks : styles.links} as={Link} to="/assets/address">
                 Item
               </Nav.Link>
               <Nav.Link className={(location.pathname === '/collection/collectionname') ? styles.activelinks : styles.links} as={Link} to="/collection/collectionname">
