@@ -30,13 +30,12 @@ const HomePage = () => {
     let t = await TOKENS;
     let metadata = await Promise.all (
       t?.map(async(tokenURI)=>{
-        let url = process.env.REACT_APP_BASEURL+tokenURI;
+        let url = "getMetadata";
         console.log(url);
         return axios
           .get(url, {
-            headers: {
-              pinata_api_key: process.env.REACT_APP_APIKEY,
-              pinata_secret_api_key: process.env.REACT_APP_APISECRET
+            params:{
+              tokenURI
             }
           });
       }) 
