@@ -35,7 +35,7 @@ const Form = () => {
         (data) => {
             console.log(data);
             if(factory){
-                console.log("uploading to contract");
+                console.log("Uploading to Contract");
                 factory?.deployArtifact(data.name, data.hash, data.price).then((response)=>{
                     console.log(response);
                     addToast('Contract deployed successfully', { appearance: 'success', autoDismiss: true, autoDismissTimeout: 2000, placement: 'bottom-right' })
@@ -52,6 +52,7 @@ const Form = () => {
     )
 
     const handleSubmit = async(event) => {
+        
         event.preventDefault();
         // const pinataContent = {
         //     "name": event.target.name.value,
@@ -70,10 +71,10 @@ const Form = () => {
         //     pinataMetadata
         // }
 
-        const response = await uploadPinata(data);
-        if (response.status != 200) {
-            console.error("Could not pin to IPFS");
-        } else {
+        // const response = await uploadPinata(data);
+        // if (response.status != 200) {
+        //     console.error("Could not pin to IPFS");
+        // } else {
             addToast('Successfully pinned data to IPFS', { appearance: 'success', autoDismiss: true, autoDismissTimeout: 2000 ,placement: 'bottom-right' })
             const data = {
                 hash : "QmbXUCR2xDBNnfUwPSG5qp2CA3X2dBcKitf4RGZQeZzirz",
@@ -81,12 +82,12 @@ const Form = () => {
                 name : "Airmax"
             }
             deployArtifactCall(data);
-        }
-        event.target.name.value = ''
-        event.target.imgURL.value = ''
-        event.target.description.value = ''
-        event.target.link.value = ''
-        event.target.price.value = ''
+        // }
+        // event.target.name.value = ''
+        // event.target.imgURL.value = ''
+        // event.target.description.value = ''
+        // event.target.link.value = ''
+        // event.target.price.value = ''
     }
 
     return (

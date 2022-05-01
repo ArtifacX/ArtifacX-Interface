@@ -5,6 +5,7 @@ import { Accordion } from "@mantine/core";
 import NikeCard from './nft/nikeCard/index';
 
 const Summary = (props) => {
+  console.log(props);
   return (
     <>
       <style type="text/css">
@@ -49,9 +50,9 @@ const Summary = (props) => {
             <div className={styles.name}>
               <h1>{props.summary['name']}</h1>
             </div>
-            <div className={styles.owner}>
-              <h1>{props.hodler}</h1>
-            </div>
+            {/* <div className={styles.owner}>
+              <h1>{addressShortner(props.hodler)}</h1>
+            </div> */}
           </div>
         </div>
         <div className={styles.imageContainer}>

@@ -8,8 +8,8 @@ import Grow from "@mui/material/Grow";
 const TabContent = (props) => {
   const history = useNavigate();
 
-  const onClickHandler = (uri) => {
-    history(`/assets/${uri}`);
+  const onClickHandler = (address) => {
+    history(`/assets/${address}`);
   };
 
   return (
@@ -39,9 +39,9 @@ const TabContent = (props) => {
                 className={styles.paper}
                 shadow="xs"
                 p="md"
-                key={props.uri[i]}
+                key={props.addresses[i]}
                 onClick={() => {
-                  onClickHandler(props.uri[i]);
+                  onClickHandler(props.addresses[i]);
                 }}
                 {...{ timeout: 0.4 }}
               >

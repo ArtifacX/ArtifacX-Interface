@@ -34,7 +34,7 @@ const Collections = (props) => {
             <h1 className={styles.heading}>Explore Collections</h1>
             <div className={styles.tabsContainer}>
                 <Tabs position='center'>
-                    <Tabs.Tab label="All" color="white"><TabContent content='All' nfts={props.nfts} uri={props.uri} /></Tabs.Tab>
+                    <Tabs.Tab label="All" color="white"><TabContent content='All' nfts={props.nfts} uri={props.uri} addresses={props.addresses}/></Tabs.Tab>
                     {/* <Tabs.Tab label="Nike" color="white"><TabContent content='Nike'/></Tabs.Tab>
                     <Tabs.Tab label="Gucci" color="white"><TabContent content='Gucci'/></Tabs.Tab>
                     <Tabs.Tab label="Accessories" color="white"><TabContent content='Accessories'/></Tabs.Tab>
