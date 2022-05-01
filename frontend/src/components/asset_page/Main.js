@@ -5,8 +5,6 @@ import { Accordion } from "@mantine/core";
 import { statusStringMapping } from "../../utils/status";
 
 const Main = (props) => {
-  console.log(props);
-  const statusMap = statusStringMapping(props.status,true,false);
   return (
     <>
     <style type="text/css">
@@ -38,7 +36,7 @@ const Main = (props) => {
             <h1>Some Collection Name</h1>
           </div>
           <div className={styles.name}>
-            <h1>{props.name}</h1>
+            <h1>{props.main['name']}</h1>
           </div>
           <div className={styles.owner}>
             <h1>{props.hodler}</h1>

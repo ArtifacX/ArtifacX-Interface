@@ -72,7 +72,7 @@ function WalletModal(props) {
       <Modal
         centered
         opened={props.isOpened}
-        onClose={() => props.eventTrigger}
+        onClose={() => {props.eventTrigger()}}
         withCloseButton={false}
       >
         <>

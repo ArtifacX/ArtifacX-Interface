@@ -1,14 +1,22 @@
 import React, { useState, useEffect, useMemo } from "react";
+import {useDispatch} from 'react-redux';
 import { useArtifactory } from "../../hooks/useContract";
 import NavigationBar from "../navbar";
 import CarouselBanner from "./Carousel";
 import Collections from "./Collections";
-import axios from 'axios';
+import axios from "axios";
+import { Loader } from '@mantine/core';
+import styles from './index.module.css';
+import {nftsActions} from '../../store/nfts';
 
 const HomePage = () => {
-
   const factory = useArtifactory();
   const [N_TOKENS, setNTokens] = useState(undefined);
+  const [isLoading, setIsLoading] = useState(undefined);
+  const [metadata, setMetadata] = useState([]);
+  const [tokens, setTokens] = useState([]);
+
+  const dispatch = useDispatch();
 
   const getURIs = async () => {
     let uri = [];
@@ -16,9 +24,8 @@ const HomePage = () => {
       uri.push(await factory?.getURIByIndex(i));
     }
     uri = await Promise.all(uri);
-    console.log(uri);
     return uri;
-  }
+  };
 
   const TOKENS = useMemo(() => {
     if (N_TOKENS != undefined) {
@@ -27,48 +34,59 @@ const HomePage = () => {
   }, [N_TOKENS]);
 
   const getDataFromPinata = async () => {
-    let t = await TOKENS;
-    let metadata = await Promise.all (
-      t?.map(async(tokenURI)=>{
-        let url = process.env.REACT_APP_BASEURL+tokenURI;
-        console.log(url);
-        return axios
-          .get(url, {
-            headers: {
-              pinata_api_key: process.env.REACT_APP_APIKEY,
-              pinata_secret_api_key: process.env.REACT_APP_APISECRET
-            }
-          });
-      }) 
-    )
-
+    const t = await TOKENS;
+    setTokens(t);
+    const metadata = await Promise.all(
+      t?.map(async (tokenURI) => {
+        const url = "getMetadata";
+        return axios.get(url, {
+          params: {
+            tokenURI,
+          },
+        });
+      })
+    );
     console.log(metadata);
+    const data = metadata.map(a => a.data);
+    dispatch(nftsActions.loadNfts({nfts: data}));
+    dispatch(nftsActions.loadURIS({uris: t}));
+    console.log(data);
+    setMetadata(metadata);
     return metadata;
   };
 
-  const METADATA = useMemo(()=>{
+  const METADATA = useMemo(async () => {
     if (N_TOKENS != undefined) {
-      return getDataFromPinata();
+      const result = await getDataFromPinata();
+      setIsLoading(false);
+      return result;
     }
-  },[N_TOKENS]);
+  }, [N_TOKENS]);
 
+  useEffect(async () => {
+    setIsLoading(true);
+    let n_tokens = await factory?.N_TOKENS();
+    setNTokens(n_tokens?.toNumber());
+  }, [factory]);
 
-
-
-useEffect(async () => {
-  let n_tokens = await factory?.N_TOKENS();
-  setNTokens(n_tokens?.toNumber());
-}, [factory]);
-
-return (
-  <>
-    <NavigationBar />
-    <CarouselBanner />
-    <div style={{ height: '100vh' }}>
-      <Collections />
-    </div>
-  </>
-);
+  return (
+    <>
+      <NavigationBar />
+      <CarouselBanner />
+      {(metadata.length == 0 && isLoading === true) ? (
+        <div style={{ height: "100vh"}}>
+          <div className={styles.container}>
+            <h1 className={styles.heading}>Explore Collections</h1>
+            <Loader style={{alignSelf: 'center'}}/>
+          </div>
+        </div>
+      ) : (
+        <div style={{ height: "100vh" }}>
+          <Collections nfts={metadata} uri={tokens} />
+        </div>
+      )}
+    </>
+  );
 };
 
 export default HomePage;

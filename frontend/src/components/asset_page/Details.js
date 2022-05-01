@@ -11,10 +11,10 @@ const Details = (props) => {
         <Container>
             <Row>
                 <Col lg={5} className={styles.summary}>
-                    <Summary name={props.name} hodler={props.hodler} description={props.description} externalLink={props.externalLink}/>
+                    <Summary summary={props.itemDetails}/>
                 </Col>
                 <Col lg={7} className={styles.main}>
-                    <Main price={props.price} status={props.status}/>
+                    <Main main={props.itemDetails}/>
                 </Col>
             </Row>
             <Row>

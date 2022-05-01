@@ -1,0 +1,13 @@
+.container{
+    position: sticky;
+    top: 80px;
+    display: flex; 
+    flex-direction:column;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
