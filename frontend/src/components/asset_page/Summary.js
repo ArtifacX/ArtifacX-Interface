@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./Summary.module.css";
 import { Card } from "react-bootstrap";
 import { Accordion } from "@mantine/core";
+import NikeCard from './nft/nikeCard/index';
 
-const Summary = () => {
+const Summary = (props) => {
   return (
     <>
       <style type="text/css">
@@ -46,31 +47,30 @@ const Summary = () => {
               <h1>Some Collection Name</h1>
             </div>
             <div className={styles.name}>
-              <h1>#Name</h1>
+              <h1>{props.summary['name']}</h1>
             </div>
             <div className={styles.owner}>
               <h1>Owner Name</h1>
             </div>
           </div>
         </div>
-        <div className={styles.imageContainer}></div>
+        <div className={styles.imageContainer}>
+          < NikeCard summary={props.summary}/>
+        </div>
         <div className={styles.description}>
           <Card>
             <Card.Body>
               <Accordion iconPosition="right" initialItem={0} multiple>
                 <Accordion.Item label="Description">
-                  Colors, fonts, shadows and many other parts are customizable
-                  to fit your design needs
+                  {props.summary['description']}
                 </Accordion.Item>
 
                 <Accordion.Item label="External Link">
-                  Configure components appearance and behavior with vast amount
-                  of settings or overwrite any part of component styles
+                  {props.summary['link']}
                 </Accordion.Item>
 
                 <Accordion.Item label="Details">
-                  With new :focus-visible pseudo-class focus ring appears only
-                  when user navigates with keyboard
+                  price: {props.summary['price']}
                 </Accordion.Item>
               </Accordion>
             </Card.Body>

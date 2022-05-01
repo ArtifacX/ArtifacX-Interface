@@ -3,7 +3,7 @@ import styles from "./Main.module.css";
 import { Card, Button } from 'react-bootstrap';
 import { Accordion } from "@mantine/core";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <>
     <style type="text/css">
@@ -35,7 +35,7 @@ const Main = () => {
             <h1>Some Collection Name</h1>
           </div>
           <div className={styles.name}>
-            <h1>#Name</h1>
+            <h1>{props.main['name']}</h1>
           </div>
           <div className={styles.owner}>
             <h1>Owner Name</h1>

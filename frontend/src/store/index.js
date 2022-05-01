@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 import authReducer from './auth';
+import nftsReducer from './nfts';
 
 const store = configureStore({
     reducer: {
-        auth: authReducer
+        auth: authReducer,
+        nfts: nftsReducer
     }
 })
 

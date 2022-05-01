@@ -6,10 +6,12 @@ import { useArtifactory, useCertificationRegistry } from '../../hooks/useContrac
 import { useActiveWeb3React } from '../../hooks/useWeb3';
 import { utils } from 'ethers';
 import { useCallback } from 'react';
+import { useToasts } from 'react-toast-notifications';
+import { LoadingOverlay} from '@mantine/core';
 
 
 const Form = () => {
-
+    const { addToast } = useToasts();
     const [submitting, setSubmitting] = useState(false);
     const { account } = useActiveWeb3React();
     const factory = useArtifactory();
@@ -36,6 +38,8 @@ const Form = () => {
                 console.log("uploading to contract");
                 factory?.deployArtifact(data.name, data.hash, data.price).then((response)=>{
                     console.log(response);
+                    addToast('Contract deployed successfully', { appearance: 'success', autoDismiss: true, autoDismissTimeout: 2000, placement: 'bottom-right' })
+                    setSubmitting(false);
                 }).catch(err => {
                     console.error(err);
                 })
@@ -70,6 +74,7 @@ const Form = () => {
         if (response.status != 200) {
             console.error("Could not pin to IPFS");
         } else {
+            addToast('Successfully pinned data to IPFS', { appearance: 'success', autoDismiss: true, autoDismissTimeout: 2000 ,placement: 'bottom-right' })
             const data = {
                 hash : response.data.IpfsHash,
                 price : utils.parseEther(event.target.price.value),
@@ -77,11 +82,16 @@ const Form = () => {
             }
             deployArtifactCall(data);
         }
-
+        event.target.name.value = ''
+        event.target.imgURL.value = ''
+        event.target.description.value = ''
+        event.target.link.value = ''
+        event.target.price.value = ''
     }
 
     return (
         <div className={styles.container}>
+            <LoadingOverlay visible={submitting} overlayColor="#121212"/>
             <Container>
                 <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '0px 0px 50px 0px' }}>
                     <div className={styles.formWrapper}>

@@ -4,6 +4,8 @@ import Form from './Form';
 import { useNavigate } from 'react-router-dom';
 import { useActiveWeb3React } from '../../hooks/useWeb3';
 import { useIsWhitelisted } from '../../hooks/useIsWhitelisted';
+import { Notification } from '@mantine/core';
+import styles from './index.module.css';
 
 const CreatePage = () => {
 
@@ -24,23 +26,25 @@ const CreatePage = () => {
     }
   },[account,loading])
 
-
-
-
-  const loader = <>loading...</>
-
   return (
-    // <RouteGuard registeredRedirectTo={"/home"}>
     <>
       <NavigationBar />
       {
-        allowed==undefined && loader
+        allowed==undefined && (<div className={styles.alert}>
+         <Notification color="red" title="Alert" disallowClose>
+          Sign In with a WHITELISTED Account!
+        </Notification>
+      </div>)
       }
       {
         allowed==true && <Form/>
       }
       {
-        allowed==false && loader
+        allowed==false && (<div className={styles.alert}>
+         <Notification color="red" title="Alert" disallowClose>
+          {account} isn't WHITELISTED!
+        </Notification>
+      </div>)
       }
     </>
   )

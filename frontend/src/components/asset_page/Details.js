@@ -5,16 +5,16 @@ import Summary from './Summary';
 import Main from './Main';
 import History from './History';
 
-const Details = () => {
+const Details = (props) => {
   return (
     <div className={styles.contentContainer}>
         <Container>
             <Row>
                 <Col lg={5} className={styles.summary}>
-                    <Summary />
+                    <Summary summary={props.itemDetails}/>
                 </Col>
                 <Col lg={7} className={styles.main}>
-                    <Main />
+                    <Main main={props.itemDetails}/>
                 </Col>
             </Row>
             <Row>

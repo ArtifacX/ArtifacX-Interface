@@ -33,7 +33,6 @@ app.get('/', (req,res) => {
 app.get('/getMetadata', async(req, res) => {
     const URI = req.query.tokenURI
     const url = `${process.env.REACT_APP_BASEURL}${URI}`;
-    console.log(url);
     const metadata = await axios.get(url, {
             headers: {
             pinata_api_key: process.env.REACT_APP_APIKEY,
@@ -42,8 +41,8 @@ app.get('/getMetadata', async(req, res) => {
             mode:'cors',
             credentials:'include'
         });
-        console.log(metadata);
-        res.send(metadata.data);
+    // console.log(metadata);
+    res.send(metadata.data);
 }); 
 
 app.get("*", (req, res) => {
