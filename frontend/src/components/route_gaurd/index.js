@@ -22,6 +22,8 @@ export const RouteGuard = ({children}) => {
       if(triedEagerConnect){
         console.log("trying eager connect");
         setLoadChildren(true);
+      } else {
+        router("/home");
       }
     }
     setLoadChildren(true);

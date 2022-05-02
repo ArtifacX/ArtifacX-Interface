@@ -1,10 +1,9 @@
 .container{
     position: sticky;
-    top: 80px;
     display: flex; 
     flex-direction:column;
-    color: white;
-    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .heading{

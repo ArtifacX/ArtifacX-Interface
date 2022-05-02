@@ -101,7 +101,7 @@ const NavigationBar = () => {
               >
                 Create
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 className={
                   location.pathname === "/assets/someid/sell"
                     ? styles.activelinks
@@ -111,8 +111,8 @@ const NavigationBar = () => {
                 to="/assets/someid/sell"
               >
                 Sell
-              </Nav.Link>
-              <Nav.Link
+              </Nav.Link> */}
+              {/* <Nav.Link
                 className={
                   location.pathname === "/assets/someid"
                     ? styles.activelinks
@@ -122,8 +122,8 @@ const NavigationBar = () => {
                 to="/assets/someid"
               >
                 Item
-              </Nav.Link>
-              <Nav.Link
+              </Nav.Link> */}
+              {/* <Nav.Link
                 className={
                   location.pathname === "/collection/collectionname"
                     ? styles.activelinks
@@ -144,7 +144,7 @@ const NavigationBar = () => {
                 to="/account"
               >
                 Profile
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link
                 className={
                   location.pathname === "/" ? styles.activelinks : styles.links
@@ -170,13 +170,13 @@ const NavigationBar = () => {
                     </span>
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item as={Link} to="/account">
+                  {/* <NavDropdown.Item as={Link} to="/account">
                   🧑🏽{" "}
                     <span>
                       Profile
                     </span>
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
+                  <NavDropdown.Divider /> */}
                   <NavDropdown.Item as={Link} to="/asset/create">
                   ⚙️{" "}
                     <span>

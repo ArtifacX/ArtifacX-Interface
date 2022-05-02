@@ -73,18 +73,28 @@ const HomePage = () => {
     <RouteGuard>
       <NavigationBar />
       <CarouselBanner />
-      { isLoading ? (
-        <div style={{ height: "100vh"}}>
-          <div className={styles.container}>
-            <h1 className={styles.heading}>Explore Collections</h1>
-            <Loader style={{alignSelf: 'center'}}/>
+      {
+        account ? (
+          isLoading ? (
+            <div style={{ height: "100vh"}}>
+              <div className={styles.container}>
+                {/* <h1 className={styles.heading}>Explore Collections</h1> */}
+                <Loader style={{alignSelf: 'center'}}/>
+              </div>
+            </div>
+          ):(
+          <div style={{ height: "100vh" }}>
+            <Collections nfts={metadata} uri={uris} addresses={addresses}  />
           </div>
-        </div>
-      ) : (
-        <div style={{ height: "100vh" }}>
-          <Collections nfts={metadata} uri={uris} addresses={addresses}  />
-        </div>
-      )}
+          )
+        )
+          :
+         ( 
+          <div className={styles.container} >
+            Connect Wallet to access ArtifacX
+          </div>
+        )
+      }
     </RouteGuard>
   );
 };

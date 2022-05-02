@@ -4,14 +4,16 @@ import { useSelector } from 'react-redux';
 import NavigationBar from '../navbar/index';
 import Details from './Details';
 import { useActiveWeb3React } from '../../hooks/useWeb3';
-import { useArtifact, useMarketX } from '../../hooks/useContract';
-import { utils } from 'ethers';
-import { getMetadata,getContractData, getMarketApproved } from '../../utils/getArtifactData';
+import { useArtifact } from '../../hooks/useContract';
+// import { utils } from 'ethers';
+import { getMetadata, getContractData, getMarketApproved } from '../../utils/getArtifactData';
 import { RouteGuard } from '../route_gaurd';
+import styles from './index.module.css';
+import { Loader } from '@mantine/core';
 
 const AssetPage = () => {
 
-  const { account,chainId } = useActiveWeb3React();
+  const { account, chainId } = useActiveWeb3React();
   const { address } = useParams();
   const artifact = useArtifact(address);
 
@@ -19,30 +21,33 @@ const AssetPage = () => {
   const addresses = useSelector(state => state.nfts.addresses);
   const itemIndex = addresses.indexOf(address);
 
-  const [metadata,setMetadata] = useState();
-  const [artifactData,setArtifactData] = useState(); 
+  const [metadata, setMetadata] = useState();
+  const [artifactData, setArtifactData] = useState();
 
-  const [loading,setLoading] = useState(true);
-  
+  const [loading, setLoading] = useState(true);
+
   useEffect(async () => {
     setLoading(true);
-    let metadata;
-    if(artifact && account){
-      if(itemIndex == -1){
-        metadata = await getMetadata(artifact);
-        // setMetadata(metadata);
-      } else {
-        metadata = nftsData[itemIndex];
+    async function fetchData() {
+      let metadata;
+      if (artifact && account) {
+        if (itemIndex == -1) {
+          metadata = await getMetadata(artifact);
+          // setMetadata(metadata);
+        } else {
+          metadata = nftsData[itemIndex];
+        }
+        const contractData = await getContractData(artifact);
+        const isApproved = await getMarketApproved(artifact, account, chainId);
+        contractData['approved'] = isApproved;
+        console.log(metadata);
+        console.log(contractData);
+        setMetadata(metadata);
+        setArtifactData(contractData);
+        setLoading(false);
       }
-      const contractData = await getContractData(artifact);
-      const isApproved = await getMarketApproved(artifact,account,chainId);
-      contractData['approved'] = isApproved;
-      console.log(metadata);
-      console.log(contractData);
-      setMetadata(metadata);
-      setArtifactData(contractData);
-      setLoading(false);
     }
+    fetchData();
   }, [account, artifact]);
 
 
@@ -50,8 +55,13 @@ const AssetPage = () => {
     <RouteGuard>
       <NavigationBar />
       {
-        loading ? (<h2>loading...</h2>) : (
-          <Details itemDetails={metadata} contractDetails={artifactData} artifact={artifact}  />
+        loading ? (
+          <div style={{ height: "100vh" }}>
+            <div className={styles.container}>
+              <Loader style={{ alignSelf: 'center' }} />
+            </div>
+          </div>) : (
+          <Details itemDetails={metadata} contractDetails={artifactData} artifact={artifact} />
         )
       }
     </RouteGuard>
