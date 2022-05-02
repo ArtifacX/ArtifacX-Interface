@@ -74,7 +74,7 @@ const TabContent = (props) => {
                       }}
                     >
                       <Badge radius="lg" color="blue">
-                        {nft.data["price"]} ETH
+                        {nft.data["price"]} ⧫
                       </Badge>
                     </Col>
                   </Row>

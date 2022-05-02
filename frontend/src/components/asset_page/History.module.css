@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .mainContainer{
     width: 100%;
+}
+
+th{
+    color: white !important;
+    font-family: Poppins;
+}
+
+tr{
+    color: white !important;
+    font-family: Poppins;
+}
+
+table{
+    color: white !important;
+    font-family: Poppins;
+}
+
+tbody{
+    color: white !important;
+    font-family: Poppins;
 }

@@ -64,7 +64,7 @@ const HomePage = () => {
     if(factory && account){
       let n_tokens = await factory?.N_TOKENS();
       setNTokens(n_tokens?.toNumber());
-      getDataFromPinata();
+      await getDataFromPinata();
       setIsLoading(false);
     }
   }, [factory,account]);
@@ -78,7 +78,7 @@ const HomePage = () => {
           isLoading ? (
             <div style={{ height: "100vh"}}>
               <div className={styles.container}>
-                {/* <h1 className={styles.heading}>Explore Collections</h1> */}
+                <h1 className={styles.heading}>Explore Collections</h1>
                 <Loader style={{alignSelf: 'center'}}/>
               </div>
             </div>

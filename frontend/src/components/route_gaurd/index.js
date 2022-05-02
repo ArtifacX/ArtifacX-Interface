@@ -23,7 +23,7 @@ export const RouteGuard = ({children}) => {
         console.log("trying eager connect");
         setLoadChildren(true);
       } else {
-        router("/home");
+        router("/");
       }
     }
     setLoadChildren(true);

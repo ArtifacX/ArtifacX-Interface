@@ -18,7 +18,7 @@ const Details = (props) => {
                 </Col>
             </Row>
             <Row>
-                <History />
+                <History ledger={props.contractDetails.ledger}/>
             </Row>
         </Container>
 
