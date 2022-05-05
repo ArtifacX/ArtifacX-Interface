@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "cd frontend && npm start",
-    "dev": "concurrently -n 'server,client' -c 'green,blue' \"nodemon index.js\" \"npm run frontend\""
+    "dev": "concurrently -n 'server,client' -c 'green,blue' \"nodemon index.js --ignore './frontend/'\" \"npm run frontend\""
   },
   "keywords": [],
   "author": "",
