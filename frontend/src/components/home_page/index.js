@@ -62,8 +62,8 @@ const HomePage = () => {
   useEffect(async () => {
     setIsLoading(true);
     if(factory && account){
-      let n_tokens = await factory?.N_TOKENS();
-      setNTokens(n_tokens?.toNumber());
+      // let n_tokens = await factory?.N_TOKENS();
+      // setNTokens(n_tokens?.toNumber());
       await getDataFromPinata();
       setIsLoading(false);
     }
