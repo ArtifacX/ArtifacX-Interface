@@ -11,14 +11,14 @@ const Details = (props) => {
         <Container>
             <Row>
                 <Col lg={5} className={styles.summary}>
-                    <Summary summary={props.itemDetails}/>
+                    <Summary summary={props.itemDetails} />
                 </Col>
                 <Col lg={7} className={styles.main}>
-                    <Main main={props.itemDetails}/>
+                    <Main itemDetails={props.itemDetails} contractDetails={props.contractDetails} artifact={props.artifact}/>
                 </Col>
             </Row>
             <Row>
-                <History />
+                <History ledger={props.contractDetails.ledger}/>
             </Row>
         </Container>
 

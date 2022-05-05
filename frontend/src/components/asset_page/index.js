@@ -1,24 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import NavigationBar from '../navbar/index';
 import Details from './Details';
+import { useActiveWeb3React } from '../../hooks/useWeb3';
+import { useArtifact } from '../../hooks/useContract';
+// import { utils } from 'ethers';
+import { getMetadata, getContractData, getMarketApproved } from '../../utils/getArtifactData';
+import { RouteGuard } from '../route_gaurd';
+import styles from './index.module.css';
+import { Loader } from '@mantine/core';
 
 const AssetPage = () => {
-  const {address} = useParams();
-  const nftsData = useSelector(state => state.nfts.nfts)
-  const urisData = useSelector(state => state.nfts.uris)
-  console.log(nftsData)
-  console.log(urisData)
-  const itemIndex = urisData.indexOf(address);
-  const itemData = nftsData[itemIndex];
-  console.log(itemIndex)
-  console.log(itemData)
+
+  const { account, chainId } = useActiveWeb3React();
+  const { address } = useParams();
+  const artifact = useArtifact(address);
+
+  const nftsData = useSelector(state => state.nfts.nfts);
+  const addresses = useSelector(state => state.nfts.addresses);
+  const itemIndex = addresses.indexOf(address);
+
+  const [metadata, setMetadata] = useState();
+  const [artifactData, setArtifactData] = useState();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(async () => {
+    setLoading(true);
+    async function fetchData() {
+      let metadata;
+      if (artifact && account) {
+        if (itemIndex == -1) {
+          metadata = await getMetadata(artifact);
+          // setMetadata(metadata);
+        } else {
+          metadata = nftsData[itemIndex];
+        }
+        const contractData = await getContractData(artifact);
+        const isApproved = await getMarketApproved(artifact, account, chainId);
+        contractData['approved'] = isApproved;
+        console.log(metadata);
+        console.log(contractData);
+        setMetadata(metadata);
+        setArtifactData(contractData);
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, [account, artifact]);
+
+
   return (
-    <>
-        <NavigationBar />
-        <Details itemDetails={itemData} />
-    </>
+    <RouteGuard>
+      <NavigationBar />
+      {
+        loading ? (
+          <div style={{ height: "100vh" }}>
+            <div className={styles.container}>
+              <Loader style={{ alignSelf: 'center' }} />
+            </div>
+          </div>) : (
+          <Details itemDetails={metadata} contractDetails={artifactData} artifact={artifact} />
+        )
+      }
+    </RouteGuard>
   )
 }
 

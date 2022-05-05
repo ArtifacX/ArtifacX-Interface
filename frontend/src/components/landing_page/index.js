@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavigationBar from '../navbar';
 import Banner from './Banner';
 import Divider from './Divider';
 import Cards from './Cards';
 import Pattern from '../../assets/images/pattern.png';
 import Footer from './Footer';
+import { RouteGuard } from '../route_gaurd';
 
 const LandingPage = () => {
+
   return (
-    <>
+    <RouteGuard>
       <NavigationBar />
       <Banner />
       <div style={{marginTop: '40px'}}>
@@ -19,7 +21,7 @@ const LandingPage = () => {
         <Cards />
       </div>
       <Footer />
-    </>
+    </RouteGuard>
   );
 };
 

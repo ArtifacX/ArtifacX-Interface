@@ -8,36 +8,38 @@ import axios from "axios";
 import { Loader } from '@mantine/core';
 import styles from './index.module.css';
 import {nftsActions} from '../../store/nfts';
+import { RouteGuard } from "../route_gaurd";
+import { useActiveWeb3React } from "../../hooks/useWeb3";
 
 const HomePage = () => {
+  const {account} = useActiveWeb3React();
   const factory = useArtifactory();
   const [N_TOKENS, setNTokens] = useState(undefined);
-  const [isLoading, setIsLoading] = useState(undefined);
+  const [isLoading, setIsLoading] = useState(true);
   const [metadata, setMetadata] = useState([]);
-  const [tokens, setTokens] = useState([]);
+  const [uris, setURIs] = useState([]);
+  const [addresses, setAddresses] = useState([]);
 
   const dispatch = useDispatch();
 
-  const getURIs = async () => {
-    let uri = [];
-    for (var i = 0; i < N_TOKENS; i++) {
-      uri.push(await factory?.getURIByIndex(i));
-    }
-    uri = await Promise.all(uri);
-    return uri;
-  };
+  // const getAddresses = async () => {
+  //   let addresses = [];
+  //   for (var i = 0; i < N_TOKENS; i++) {
+  //     addresses.push(await factory?.getAddressByIndex(i));
+  //   }
+  //   addresses = await Promise.all(addresses);
+  //   console.log(addresses);
+  //   return addresses;
+  // };
 
-  const TOKENS = useMemo(() => {
-    if (N_TOKENS != undefined) {
-      return getURIs();
-    }
-  }, [N_TOKENS]);
+
 
   const getDataFromPinata = async () => {
-    const t = await TOKENS;
-    setTokens(t);
+    const uris = await factory?.getURIs();
+    const a = await factory?.getAddresses();
+    setURIs(uris);
     const metadata = await Promise.all(
-      t?.map(async (tokenURI) => {
+      uris?.map(async (tokenURI) => {
         const url = "getMetadata";
         return axios.get(url, {
           params: {
@@ -46,46 +48,54 @@ const HomePage = () => {
         });
       })
     );
-    console.log(metadata);
     const data = metadata.map(a => a.data);
+    // const a = await getAddresses();
     dispatch(nftsActions.loadNfts({nfts: data}));
-    dispatch(nftsActions.loadURIS({uris: t}));
-    console.log(data);
+    dispatch(nftsActions.loadURIS({uris: uris}));
+    dispatch(nftsActions.loadAddresses({addresses: a}));
+    console.log(a); 
     setMetadata(metadata);
+    setAddresses(a);
     return metadata;
   };
 
-  const METADATA = useMemo(async () => {
-    if (N_TOKENS != undefined) {
-      const result = await getDataFromPinata();
-      setIsLoading(false);
-      return result;
-    }
-  }, [N_TOKENS]);
-
   useEffect(async () => {
     setIsLoading(true);
-    let n_tokens = await factory?.N_TOKENS();
-    setNTokens(n_tokens?.toNumber());
-  }, [factory]);
+    if(factory && account){
+      // let n_tokens = await factory?.N_TOKENS();
+      // setNTokens(n_tokens?.toNumber());
+      await getDataFromPinata();
+      setIsLoading(false);
+    }
+  }, [factory,account]);
 
   return (
-    <>
+    <RouteGuard>
       <NavigationBar />
       <CarouselBanner />
-      {(metadata.length == 0 && isLoading === true) ? (
-        <div style={{ height: "100vh"}}>
-          <div className={styles.container}>
-            <h1 className={styles.heading}>Explore Collections</h1>
-            <Loader style={{alignSelf: 'center'}}/>
+      {
+        account ? (
+          isLoading ? (
+            <div style={{ height: "100vh"}}>
+              <div className={styles.container}>
+                <h1 className={styles.heading}>Explore Collections</h1>
+                <Loader style={{alignSelf: 'center'}}/>
+              </div>
+            </div>
+          ):(
+          <div style={{ height: "100vh" }}>
+            <Collections nfts={metadata} uri={uris} addresses={addresses}  />
           </div>
-        </div>
-      ) : (
-        <div style={{ height: "100vh" }}>
-          <Collections nfts={metadata} uri={tokens} />
-        </div>
-      )}
-    </>
+          )
+        )
+          :
+         ( 
+          <div className={styles.container} >
+            Connect Wallet to access ArtifacX
+          </div>
+        )
+      }
+    </RouteGuard>
   );
 };
 

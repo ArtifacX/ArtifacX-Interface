@@ -6,6 +6,7 @@ import { useActiveWeb3React } from '../../hooks/useWeb3';
 import { useIsWhitelisted } from '../../hooks/useIsWhitelisted';
 import { Notification } from '@mantine/core';
 import styles from './index.module.css';
+import { RouteGuard } from '../route_gaurd';
 
 const CreatePage = () => {
 
@@ -27,7 +28,7 @@ const CreatePage = () => {
   },[account,loading])
 
   return (
-    <>
+    <RouteGuard>
       <NavigationBar />
       {
         allowed==undefined && (<div className={styles.alert}>
@@ -46,7 +47,7 @@ const CreatePage = () => {
         </Notification>
       </div>)
       }
-    </>
+    </RouteGuard>
   )
 }
 
