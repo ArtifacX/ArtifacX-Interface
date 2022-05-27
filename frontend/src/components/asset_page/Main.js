@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 import { utils } from "ethers";
 import { addressShortner } from "../../utils";
 import { useToasts } from 'react-toast-notifications';
+import History from './History';
 
 const Main = (props) => {
 
@@ -189,7 +190,7 @@ const Main = (props) => {
         <Card>
           <Card.Header as="h5">Transact</Card.Header>
           <Card.Body>
-            <Card.Title>Place your bids here</Card.Title>
+            {/* <Card.Title>Place your bids here</Card.Title> */}
             {
               loading ? "" : (
                 <>
@@ -230,7 +231,7 @@ const Main = (props) => {
             }
           </Card.Body>
         </Card>
-
+        <History ledger={props.contractDetails.ledger}/>
         {/* <Card>
           <Card.Body>
             <Accordion iconPosition="right" initialItem={0}>

@@ -123,7 +123,7 @@ const NikeCard = (props) => {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={AirJordanImg} />
+              <img src={props.summary.imgURL} />
             </Shoes>
           </ShoesWrapper>
           <NikeText>ARTI FACX</NikeText>

@@ -17,9 +17,9 @@ const Details = (props) => {
                     <Main itemDetails={props.itemDetails} contractDetails={props.contractDetails} artifact={props.artifact}/>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 <History ledger={props.contractDetails.ledger}/>
-            </Row>
+            </Row> */}
         </Container>
 
     </div>

@@ -9,17 +9,17 @@ const History = (props) => {
   const rows = props.ledger.map((address, i) => {
     if (i == 0) {
       return (<tr key={address}>
-        <td>Creator</td>
+        <td>📜 Creator</td>
         <td>{address}</td>
       </tr>);
     } else if (i == 1) {
       return (<tr key={address}>
-        <td>Minter</td>
+        <td>🪙 Minter</td>
         <td>{address}</td>
       </tr>);
     }else{
       return (<tr key={address}>
-      <td>Tranferred</td>
+      <td>↪️ Transferred</td>
       <td>{address}</td>
     </tr>);
     }
