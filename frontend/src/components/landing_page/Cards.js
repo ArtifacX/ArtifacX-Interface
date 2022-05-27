@@ -7,7 +7,7 @@ const Cards = () => {
       <div className={styles.wrapper}>
         <div className={styles.card}>
           <h2>
-            #1
+            Product Authenticity Like Never Before 🚀
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -18,7 +18,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-             #2
+             Link your ArtifacX to NFT 💾
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,
@@ -29,7 +29,7 @@ const Cards = () => {
         </div>
         <div className={styles.card}>
           <h2>
-            #3
+            Manage Authenticity on Chain ⛓️
           </h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,

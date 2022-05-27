@@ -67,11 +67,12 @@ const Summary = (props) => {
                 </Accordion.Item>
 
                 <Accordion.Item label="External Link">
-                  {props.summary['link']}
+                  <a href={props.summary['link']} style={{textDecoration:'none'}} target="_blank">Link</a>
+                  
                 </Accordion.Item>
 
                 <Accordion.Item label="Details">
-                  price: {props.summary['price']}
+                  price: {props.summary['price']} ⧫
                 </Accordion.Item>
               </Accordion>
             </Card.Body>

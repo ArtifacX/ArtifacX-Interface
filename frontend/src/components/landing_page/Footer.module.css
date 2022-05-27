@@ -1,7 +1,13 @@
 .wrapper{
     width: 100%;
     background-color: #141403;
-    height: 300px;
+    height: 200px;
     margin-top: -170px;
     border-top: 1px solid grey;
+    padding: 20px;
+}
+
+.division{
+    color: white;
+    font-family: 'Poppins';
 }

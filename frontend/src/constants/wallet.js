@@ -10,13 +10,13 @@ export const SUPPORTED_WALLETS = {
   WALLET_CONNECT: {
     connector: walletconnect,
     name: "WalletConnect",
-    iconURL: "https://storage.opensea.io/static/wallets/walletconnect/walletconnect-alternative.png",
+    iconURL: "https://github.com/WalletConnect/walletconnect-assets/blob/master/png/circle/walletconnect-circle-white.png?raw=true",
     mobile: true,
   },
   WALLETLINK_CONNECT: {
     connector: walletlink,
     name: 'Coinbase',
-    iconURL: "https://storage.opensea.io/static/wallets/walletlink/walletlink-alternative.png",
+    iconURL: "https://static.opensea.io/logos/walletlink-alternative.png",
   },
 
 
