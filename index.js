@@ -5,10 +5,10 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const axios = require('axios');
+
 if(process.env.NODE_ENV !== "production"){
     require('dotenv').config();
 }
-// require('./utils/connectdb');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -33,16 +33,21 @@ app.get('/', (req,res) => {
 app.get('/getMetadata', async(req, res) => {
     const URI = req.query.tokenURI
     const url = `${process.env.REACT_APP_BASEURL}${URI}`;
-    const metadata = await axios.get(url, {
-            headers: {
-            pinata_api_key: process.env.REACT_APP_APIKEY,
-            pinata_secret_api_key: process.env.REACT_APP_APISECRET
-            },
-            mode:'cors',
-            credentials:'include'
-        });
-    // console.log(metadata);
-    res.send(metadata.data);
+    console.log(url);
+    try{
+        const metadata = await axios.get(url, {
+                headers: {
+                pinata_api_key: process.env.REACT_APP_APIKEY,
+                pinata_secret_api_key: process.env.REACT_APP_APISECRET
+                },
+                mode:'cors',
+                credentials:'include'
+            });
+        console.log(metadata);
+        res.send(metadata.data);
+    } catch(err) {
+        res.send(err);
+    }
 }); 
 
 app.get("*", (req, res) => {

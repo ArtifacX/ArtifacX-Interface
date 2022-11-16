@@ -9,7 +9,7 @@ import ARTIFACT_ABI from "../abis/Artifact.json"
 
 
 // returns null on errors
-export function useContract(addressOrAddressMap,ABI,withSignerIfPossible = true) {
+export function useContract(addressOrAddressMap, ABI, withSignerIfPossible = true) {
   const { library, account, chainId } = useActiveWeb3React();
 
   return useMemo(() => {
@@ -37,9 +37,10 @@ export function useMarketX(withSignerIfPossible) {
 }
 
 export function useArtifactory(withSignerIfPossible) {
+  console.log(ARTIFACTORY_ADDRESS[1337]);
   return useContract(ARTIFACTORY_ADDRESS, ARTIFACTORY_ABI.abi, withSignerIfPossible);
 }
 
-export function useArtifact(ARTIFACT_ADDRESS,withSignerIfPossible) {
+export function useArtifact(ARTIFACT_ADDRESS, withSignerIfPossible) {
   return useContract(ARTIFACT_ADDRESS, ARTIFACT_ABI.abi, withSignerIfPossible);
 }
