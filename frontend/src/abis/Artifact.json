@@ -6753,7 +6753,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_revert_t_enum$_Status_$1954",
+                      "name": "validator_revert_t_enum$_Status_$1951",
                       "nodeType": "YulIdentifier",
                       "src": "3339:37:16"
                     },
@@ -6765,7 +6765,7 @@
                 }
               ]
             },
-            "name": "abi_decode_t_enum$_Status_$1954",
+            "name": "abi_decode_t_enum$_Status_$1951",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -10148,7 +10148,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "abi_decode_t_enum$_Status_$1954",
+                          "name": "abi_decode_t_enum$_Status_$1951",
                           "nodeType": "YulIdentifier",
                           "src": "8705:31:16"
                         },
@@ -10167,7 +10167,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_enum$_Status_$1954",
+            "name": "abi_decode_tuple_t_enum$_Status_$1951",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -11624,7 +11624,7 @@
                           }
                         ],
                         "functionName": {
-                          "name": "convert_t_enum$_Status_$1954_to_t_uint8",
+                          "name": "convert_t_enum$_Status_$1951_to_t_uint8",
                           "nodeType": "YulIdentifier",
                           "src": "11781:39:16"
                         },
@@ -11645,7 +11645,7 @@
                 }
               ]
             },
-            "name": "abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack",
+            "name": "abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -15246,7 +15246,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack",
+                      "name": "abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "21467:52:16"
                     },
@@ -15258,7 +15258,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_enum$_Status_$1954__to_t_uint8__fromStack_reversed",
+            "name": "abi_encode_tuple_t_enum$_Status_$1951__to_t_uint8__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -17970,7 +17970,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack",
+                      "name": "abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack",
                       "nodeType": "YulIdentifier",
                       "src": "28878:52:16"
                     },
@@ -17982,7 +17982,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_enum$_Status_$1954__to_t_uint256_t_uint256_t_uint256_t_uint8__fromStack_reversed",
+            "name": "abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_enum$_Status_$1951__to_t_uint256_t_uint256_t_uint256_t_uint8__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -19983,7 +19983,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "validator_assert_t_enum$_Status_$1954",
+                      "name": "validator_assert_t_enum$_Status_$1951",
                       "nodeType": "YulIdentifier",
                       "src": "32771:37:16"
                     },
@@ -19995,7 +19995,7 @@
                 }
               ]
             },
-            "name": "cleanup_t_enum$_Status_$1954",
+            "name": "cleanup_t_enum$_Status_$1951",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -20136,7 +20136,7 @@
                       }
                     ],
                     "functionName": {
-                      "name": "cleanup_t_enum$_Status_$1954",
+                      "name": "cleanup_t_enum$_Status_$1951",
                       "nodeType": "YulIdentifier",
                       "src": "33134:28:16"
                     },
@@ -20153,7 +20153,7 @@
                 }
               ]
             },
-            "name": "convert_t_enum$_Status_$1954_to_t_uint8",
+            "name": "convert_t_enum$_Status_$1951_to_t_uint8",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -23807,7 +23807,7 @@
                 }
               ]
             },
-            "name": "validator_assert_t_enum$_Status_$1954",
+            "name": "validator_assert_t_enum$_Status_$1951",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -24202,7 +24202,7 @@
                 }
               ]
             },
-            "name": "validator_revert_t_enum$_Status_$1954",
+            "name": "validator_revert_t_enum$_Status_$1951",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -24317,7 +24317,7 @@
           }
         ]
       },
-      "contents": "{\n\n    // address[]\n    function abi_decode_available_length_t_array$_t_address_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_address_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let src := offset\n        if gt(add(src, mul(length, 0x20)), end) {\n            revert(0, 0)\n        }\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_address(elementPos, end))\n            dst := add(dst, 0x20)\n            src := add(src, 0x20)\n        }\n    }\n\n    // uint256[]\n    function abi_decode_available_length_t_array$_t_uint256_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_uint256_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let src := offset\n        if gt(add(src, mul(length, 0x20)), end) {\n            revert(0, 0)\n        }\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_uint256(elementPos, end))\n            dst := add(dst, 0x20)\n            src := add(src, 0x20)\n        }\n    }\n\n    function abi_decode_available_length_t_bytes_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_bytes_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    // address[]\n    function abi_decode_t_array$_t_address_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_address_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    // uint256[]\n    function abi_decode_t_array$_t_uint256_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_uint256_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_t_bool(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_t_bytes4(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_t_bytes4_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    // bytes\n    function abi_decode_t_bytes_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_bytes_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_t_enum$_Status_$1954(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_enum$_Status_$1954(value)\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_array$_t_uint256_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value2 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value3 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value4 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 64\n\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 96\n\n            value3 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value4 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_bool(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value0 := abi_decode_t_array$_t_address_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value1 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_enum$_Status_$1954(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_enum$_Status_$1954(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encodeUpdatedPos_t_address_to_t_address(value0, pos) -> updatedPos {\n        abi_encode_t_address_to_t_address(value0, pos)\n        updatedPos := add(pos, 0x20)\n    }\n\n    function abi_encodeUpdatedPos_t_uint256_to_t_uint256(value0, pos) -> updatedPos {\n        abi_encode_t_uint256_to_t_uint256(value0, pos)\n        updatedPos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    // address[] -> address[]\n    function abi_encode_t_array$_t_address_$dyn_memory_ptr_to_t_array$_t_address_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_address_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_address_$dyn_memory_ptr_fromStack(pos, length)\n        let baseRef := array_dataslot_t_array$_t_address_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            let elementValue0 := mload(srcPtr)\n            pos := abi_encodeUpdatedPos_t_address_to_t_address(elementValue0, pos)\n            srcPtr := array_nextElement_t_array$_t_address_$dyn_memory_ptr(srcPtr)\n        }\n        end := pos\n    }\n\n    // uint256[] -> uint256[]\n    function abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_uint256_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_uint256_$dyn_memory_ptr_fromStack(pos, length)\n        let baseRef := array_dataslot_t_array$_t_uint256_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            let elementValue0 := mload(srcPtr)\n            pos := abi_encodeUpdatedPos_t_uint256_to_t_uint256(elementValue0, pos)\n            srcPtr := array_nextElement_t_array$_t_uint256_$dyn_memory_ptr(srcPtr)\n        }\n        end := pos\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_bytes_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_Status_$1954_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 52)\n        store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 43)\n        store_literal_in_memory_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 38)\n        store_literal_in_memory_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 37)\n        store_literal_in_memory_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 50)\n        store_literal_in_memory_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 42)\n        store_literal_in_memory_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 32)\n        store_literal_in_memory_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 22)\n        store_literal_in_memory_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 33)\n        store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__to_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value3,  tail)\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_address_$dyn_memory_ptr__to_t_array$_t_address_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_address_$dyn_memory_ptr_to_t_array$_t_address_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value0,  tail)\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value1,  tail)\n\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_enum$_Status_$1954__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_enum$_Status_$1954__to_t_uint256_t_uint256_t_uint256_t_uint8__fromStack_reversed(headStart , value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 128)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_enum$_Status_$1954_to_t_uint8_fromStack(value3,  add(headStart, 96))\n\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function array_allocation_size_t_array$_t_address_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_allocation_size_t_array$_t_uint256_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_allocation_size_t_bytes_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_address_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_uint256_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_length_t_array$_t_address_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_array$_t_uint256_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_bytes_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_nextElement_t_array$_t_address_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_nextElement_t_array$_t_uint256_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_address_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_uint256_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        // overflow, if x > (maxValue - y)\n        if gt(x, sub(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, y)) { panic_error_0x11() }\n\n        sum := add(x, y)\n    }\n\n    function checked_sub_t_uint256(x, y) -> diff {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        if lt(x, y) { panic_error_0x11() }\n\n        diff := sub(x, y)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function cleanup_t_bytes4(value) -> cleaned {\n        cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n    }\n\n    function cleanup_t_enum$_Status_$1954(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_Status_$1954(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_enum$_Status_$1954_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_Status_$1954(value)\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function return_data_selector() -> sig {\n        if gt(returndatasize(), 3) {\n            returndatacopy(0, 0, 4)\n            sig := shift_right_224_unsigned(mload(0))\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function shift_right_224_unsigned(value) -> newValue {\n        newValue :=\n\n        shr(224, value)\n\n    }\n\n    function store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to non ERC1155\")\n\n        mstore(add(memPtr, 32), \"Receiver implementer\")\n\n    }\n\n    function store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ERC1155Receiver rejecte\")\n\n        mstore(add(memPtr, 32), \"d tokens\")\n\n    }\n\n    function store_literal_in_memory_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: balance query for the z\")\n\n        mstore(add(memPtr, 32), \"ero address\")\n\n    }\n\n    function store_literal_in_memory_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe(memPtr) {\n\n        mstore(add(memPtr, 0), \"Ownable: new owner is the zero a\")\n\n        mstore(add(memPtr, 32), \"ddress\")\n\n    }\n\n    function store_literal_in_memory_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: caller is not owner nor\")\n\n        mstore(add(memPtr, 32), \" approved\")\n\n    }\n\n    function store_literal_in_memory_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to the zero ad\")\n\n        mstore(add(memPtr, 32), \"dress\")\n\n    }\n\n    function store_literal_in_memory_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer caller is not \")\n\n        mstore(add(memPtr, 32), \"owner nor approved\")\n\n    }\n\n    function store_literal_in_memory_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: insufficient balance fo\")\n\n        mstore(add(memPtr, 32), \"r transfer\")\n\n    }\n\n    function store_literal_in_memory_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe(memPtr) {\n\n        mstore(add(memPtr, 0), \"Ownable: caller is not the owner\")\n\n    }\n\n    function store_literal_in_memory_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093(memPtr) {\n\n        mstore(add(memPtr, 0), \"Artifact: Only MarketX\")\n\n    }\n\n    function store_literal_in_memory_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: setting approval status\")\n\n        mstore(add(memPtr, 32), \" for self\")\n\n    }\n\n    function store_literal_in_memory_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: accounts and ids length\")\n\n        mstore(add(memPtr, 32), \" mismatch\")\n\n    }\n\n    function store_literal_in_memory_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ids and amounts length \")\n\n        mstore(add(memPtr, 32), \"mismatch\")\n\n    }\n\n    function store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: mint to the zero addres\")\n\n        mstore(add(memPtr, 32), \"s\")\n\n    }\n\n    function try_decode_error_message() -> ret {\n        if lt(returndatasize(), 0x44) { leave }\n\n        let data := allocate_unbounded()\n        returndatacopy(data, 4, sub(returndatasize(), 4))\n\n        let offset := mload(data)\n        if or(\n            gt(offset, 0xffffffffffffffff),\n            gt(add(offset, 0x24), returndatasize())\n            ) {\n            leave\n        }\n\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, 0xffffffffffffffff) { leave }\n\n        let end := add(add(msg, 0x20), length)\n        if gt(end, add(data, sub(returndatasize(), 4))) { leave }\n\n        finalize_allocation(data, add(offset, add(0x20, length)))\n        ret := msg\n    }\n\n    function validator_assert_t_enum$_Status_$1954(value) {\n        if iszero(lt(value, 5)) { panic_error_0x21() }\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_bool(value) {\n        if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_bytes4(value) {\n        if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_enum$_Status_$1954(value) {\n        if iszero(lt(value, 5)) { revert(0, 0) }\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "contents": "{\n\n    // address[]\n    function abi_decode_available_length_t_array$_t_address_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_address_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let src := offset\n        if gt(add(src, mul(length, 0x20)), end) {\n            revert(0, 0)\n        }\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_address(elementPos, end))\n            dst := add(dst, 0x20)\n            src := add(src, 0x20)\n        }\n    }\n\n    // uint256[]\n    function abi_decode_available_length_t_array$_t_uint256_$dyn_memory_ptr(offset, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_array$_t_uint256_$dyn_memory_ptr(length))\n        let dst := array\n\n        mstore(array, length)\n        dst := add(array, 0x20)\n\n        let src := offset\n        if gt(add(src, mul(length, 0x20)), end) {\n            revert(0, 0)\n        }\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n\n            let elementPos := src\n\n            mstore(dst, abi_decode_t_uint256(elementPos, end))\n            dst := add(dst, 0x20)\n            src := add(src, 0x20)\n        }\n    }\n\n    function abi_decode_available_length_t_bytes_memory_ptr(src, length, end) -> array {\n        array := allocate_memory(array_allocation_size_t_bytes_memory_ptr(length))\n        mstore(array, length)\n        let dst := add(array, 0x20)\n        if gt(add(src, length), end) { revert(0, 0) }\n        copy_calldata_to_memory(src, dst, length)\n    }\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    // address[]\n    function abi_decode_t_array$_t_address_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_address_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    // uint256[]\n    function abi_decode_t_array$_t_uint256_$dyn_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_array$_t_uint256_$dyn_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_t_bool(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bool(value)\n    }\n\n    function abi_decode_t_bytes4(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    function abi_decode_t_bytes4_fromMemory(offset, end) -> value {\n        value := mload(offset)\n        validator_revert_t_bytes4(value)\n    }\n\n    // bytes\n    function abi_decode_t_bytes_memory_ptr(offset, end) -> array {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let length := calldataload(offset)\n        array := abi_decode_available_length_t_bytes_memory_ptr(add(offset, 0x20), length, end)\n    }\n\n    function abi_decode_t_enum$_Status_$1951(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_enum$_Status_$1951(value)\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_array$_t_uint256_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 64))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value2 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 96))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value3 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value4 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4 {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 64\n\n            value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 96\n\n            value3 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 128))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value4 := abi_decode_t_bytes_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_bool(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := calldataload(add(headStart, 0))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value0 := abi_decode_t_array$_t_address_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := calldataload(add(headStart, 32))\n            if gt(offset, 0xffffffffffffffff) { revert(0, 0) }\n\n            value1 := abi_decode_t_array$_t_uint256_$dyn_memory_ptr(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_bytes4_fromMemory(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_enum$_Status_$1951(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_enum$_Status_$1951(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encodeUpdatedPos_t_address_to_t_address(value0, pos) -> updatedPos {\n        abi_encode_t_address_to_t_address(value0, pos)\n        updatedPos := add(pos, 0x20)\n    }\n\n    function abi_encodeUpdatedPos_t_uint256_to_t_uint256(value0, pos) -> updatedPos {\n        abi_encode_t_uint256_to_t_uint256(value0, pos)\n        updatedPos := add(pos, 0x20)\n    }\n\n    function abi_encode_t_address_to_t_address(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    // address[] -> address[]\n    function abi_encode_t_array$_t_address_$dyn_memory_ptr_to_t_array$_t_address_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_address_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_address_$dyn_memory_ptr_fromStack(pos, length)\n        let baseRef := array_dataslot_t_array$_t_address_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            let elementValue0 := mload(srcPtr)\n            pos := abi_encodeUpdatedPos_t_address_to_t_address(elementValue0, pos)\n            srcPtr := array_nextElement_t_array$_t_address_$dyn_memory_ptr(srcPtr)\n        }\n        end := pos\n    }\n\n    // uint256[] -> uint256[]\n    function abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value, pos)  -> end  {\n        let length := array_length_t_array$_t_uint256_$dyn_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_array$_t_uint256_$dyn_memory_ptr_fromStack(pos, length)\n        let baseRef := array_dataslot_t_array$_t_uint256_$dyn_memory_ptr(value)\n        let srcPtr := baseRef\n        for { let i := 0 } lt(i, length) { i := add(i, 1) }\n        {\n            let elementValue0 := mload(srcPtr)\n            pos := abi_encodeUpdatedPos_t_uint256_to_t_uint256(elementValue0, pos)\n            srcPtr := array_nextElement_t_array$_t_uint256_$dyn_memory_ptr(srcPtr)\n        }\n        end := pos\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_bytes_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack(value, pos) {\n        mstore(pos, convert_t_enum$_Status_$1951_to_t_uint8(value))\n    }\n\n    function abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value, pos) -> end {\n        let length := array_length_t_string_memory_ptr(value)\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length)\n        copy_memory_to_memory(add(value, 0x20), pos, length)\n        end := add(pos, round_up_to_mul_of_32(length))\n    }\n\n    function abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 52)\n        store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 43)\n        store_literal_in_memory_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 38)\n        store_literal_in_memory_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 37)\n        store_literal_in_memory_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 50)\n        store_literal_in_memory_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 42)\n        store_literal_in_memory_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 32)\n        store_literal_in_memory_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 22)\n        store_literal_in_memory_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093(pos)\n        end := add(pos, 32)\n    }\n\n    function abi_encode_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 41)\n        store_literal_in_memory_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 40)\n        store_literal_in_memory_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 33)\n        store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(pos)\n        end := add(pos, 64)\n    }\n\n    function abi_encode_t_uint256_to_t_uint256(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__to_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        mstore(add(headStart, 64), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value2,  tail)\n\n        mstore(add(headStart, 96), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value3,  tail)\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart , value4, value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 160)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_address_to_t_address_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value3,  add(headStart, 96))\n\n        mstore(add(headStart, 128), sub(tail, headStart))\n        tail := abi_encode_t_bytes_memory_ptr_to_t_bytes_memory_ptr_fromStack(value4,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_address_$dyn_memory_ptr__to_t_array$_t_address_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_address_$dyn_memory_ptr_to_t_array$_t_address_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value0,  tail)\n\n        mstore(add(headStart, 32), sub(tail, headStart))\n        tail := abi_encode_t_array$_t_uint256_$dyn_memory_ptr_to_t_array$_t_uint256_$dyn_memory_ptr_fromStack(value1,  tail)\n\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_enum$_Status_$1951__to_t_uint8__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_string_memory_ptr_to_t_string_memory_ptr_fromStack(value0,  tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart , value1, value0) -> tail {\n        tail := add(headStart, 64)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n    }\n\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_enum$_Status_$1951__to_t_uint256_t_uint256_t_uint256_t_uint8__fromStack_reversed(headStart , value3, value2, value1, value0) -> tail {\n        tail := add(headStart, 128)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value1,  add(headStart, 32))\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value2,  add(headStart, 64))\n\n        abi_encode_t_enum$_Status_$1951_to_t_uint8_fromStack(value3,  add(headStart, 96))\n\n    }\n\n    function allocate_memory(size) -> memPtr {\n        memPtr := allocate_unbounded()\n        finalize_allocation(memPtr, size)\n    }\n\n    function allocate_unbounded() -> memPtr {\n        memPtr := mload(64)\n    }\n\n    function array_allocation_size_t_array$_t_address_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_allocation_size_t_array$_t_uint256_$dyn_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := mul(length, 0x20)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_allocation_size_t_bytes_memory_ptr(length) -> size {\n        // Make sure we can allocate memory without overflow\n        if gt(length, 0xffffffffffffffff) { panic_error_0x41() }\n\n        size := round_up_to_mul_of_32(length)\n\n        // add length slot\n        size := add(size, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_address_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_dataslot_t_array$_t_uint256_$dyn_memory_ptr(ptr) -> data {\n        data := ptr\n\n        data := add(ptr, 0x20)\n\n    }\n\n    function array_length_t_array$_t_address_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_array$_t_uint256_$dyn_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_bytes_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_length_t_string_memory_ptr(value) -> length {\n\n        length := mload(value)\n\n    }\n\n    function array_nextElement_t_array$_t_address_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_nextElement_t_array$_t_uint256_$dyn_memory_ptr(ptr) -> next {\n        next := add(ptr, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_address_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_array$_t_uint256_$dyn_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_bytes_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function checked_add_t_uint256(x, y) -> sum {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        // overflow, if x > (maxValue - y)\n        if gt(x, sub(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff, y)) { panic_error_0x11() }\n\n        sum := add(x, y)\n    }\n\n    function checked_sub_t_uint256(x, y) -> diff {\n        x := cleanup_t_uint256(x)\n        y := cleanup_t_uint256(y)\n\n        if lt(x, y) { panic_error_0x11() }\n\n        diff := sub(x, y)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function cleanup_t_bytes4(value) -> cleaned {\n        cleaned := and(value, 0xffffffff00000000000000000000000000000000000000000000000000000000)\n    }\n\n    function cleanup_t_enum$_Status_$1951(value) -> cleaned {\n        cleaned := value validator_assert_t_enum$_Status_$1951(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function convert_t_enum$_Status_$1951_to_t_uint8(value) -> converted {\n        converted := cleanup_t_enum$_Status_$1951(value)\n    }\n\n    function copy_calldata_to_memory(src, dst, length) {\n        calldatacopy(dst, src, length)\n        // clear end\n        mstore(add(dst, length), 0)\n    }\n\n    function copy_memory_to_memory(src, dst, length) {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length)\n        {\n            // clear end\n            mstore(add(dst, length), 0)\n        }\n    }\n\n    function extract_byte_array_length(data) -> length {\n        length := div(data, 2)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) {\n            length := and(length, 0x7f)\n        }\n\n        if eq(outOfPlaceEncoding, lt(length, 32)) {\n            panic_error_0x22()\n        }\n    }\n\n    function finalize_allocation(memPtr, size) {\n        let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))\n        // protect against overflow\n        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n\n    function increment_t_uint256(value) -> ret {\n        value := cleanup_t_uint256(value)\n        if eq(value, 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n\n    function panic_error_0x11() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x21() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x22() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x22)\n        revert(0, 0x24)\n    }\n\n    function panic_error_0x41() {\n        mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n\n    function return_data_selector() -> sig {\n        if gt(returndatasize(), 3) {\n            returndatacopy(0, 0, 4)\n            sig := shift_right_224_unsigned(mload(0))\n        }\n    }\n\n    function round_up_to_mul_of_32(value) -> result {\n        result := and(add(value, 31), not(31))\n    }\n\n    function shift_right_224_unsigned(value) -> newValue {\n        newValue :=\n\n        shr(224, value)\n\n    }\n\n    function store_literal_in_memory_00aa752fb1526000e5241602affc3d70ef506da48a27ea57140102b439e655ed(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to non ERC1155\")\n\n        mstore(add(memPtr, 32), \"Receiver implementer\")\n\n    }\n\n    function store_literal_in_memory_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ERC1155Receiver rejecte\")\n\n        mstore(add(memPtr, 32), \"d tokens\")\n\n    }\n\n    function store_literal_in_memory_1f4de6a436172e7f7b1540476031cb037fc18ede9cc346a56da1697cbd352aa9(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: balance query for the z\")\n\n        mstore(add(memPtr, 32), \"ero address\")\n\n    }\n\n    function store_literal_in_memory_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe(memPtr) {\n\n        mstore(add(memPtr, 0), \"Ownable: new owner is the zero a\")\n\n        mstore(add(memPtr, 32), \"ddress\")\n\n    }\n\n    function store_literal_in_memory_394ac917f53b95ee25db2a5da5874c5b1f0af95a4fdf34992ff8b19c458f239a(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: caller is not owner nor\")\n\n        mstore(add(memPtr, 32), \" approved\")\n\n    }\n\n    function store_literal_in_memory_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer to the zero ad\")\n\n        mstore(add(memPtr, 32), \"dress\")\n\n    }\n\n    function store_literal_in_memory_70a41c66829f5508884cda9ef3d2f72551b34f23e4035be97941681123d2d686(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: transfer caller is not \")\n\n        mstore(add(memPtr, 32), \"owner nor approved\")\n\n    }\n\n    function store_literal_in_memory_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: insufficient balance fo\")\n\n        mstore(add(memPtr, 32), \"r transfer\")\n\n    }\n\n    function store_literal_in_memory_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe(memPtr) {\n\n        mstore(add(memPtr, 0), \"Ownable: caller is not the owner\")\n\n    }\n\n    function store_literal_in_memory_ba3742b3a8c5858d637533d447142235017ef4123979d414d5cb76e20b0a8093(memPtr) {\n\n        mstore(add(memPtr, 0), \"Artifact: Only MarketX\")\n\n    }\n\n    function store_literal_in_memory_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: setting approval status\")\n\n        mstore(add(memPtr, 32), \" for self\")\n\n    }\n\n    function store_literal_in_memory_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: accounts and ids length\")\n\n        mstore(add(memPtr, 32), \" mismatch\")\n\n    }\n\n    function store_literal_in_memory_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: ids and amounts length \")\n\n        mstore(add(memPtr, 32), \"mismatch\")\n\n    }\n\n    function store_literal_in_memory_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2(memPtr) {\n\n        mstore(add(memPtr, 0), \"ERC1155: mint to the zero addres\")\n\n        mstore(add(memPtr, 32), \"s\")\n\n    }\n\n    function try_decode_error_message() -> ret {\n        if lt(returndatasize(), 0x44) { leave }\n\n        let data := allocate_unbounded()\n        returndatacopy(data, 4, sub(returndatasize(), 4))\n\n        let offset := mload(data)\n        if or(\n            gt(offset, 0xffffffffffffffff),\n            gt(add(offset, 0x24), returndatasize())\n            ) {\n            leave\n        }\n\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, 0xffffffffffffffff) { leave }\n\n        let end := add(add(msg, 0x20), length)\n        if gt(end, add(data, sub(returndatasize(), 4))) { leave }\n\n        finalize_allocation(data, add(offset, add(0x20, length)))\n        ret := msg\n    }\n\n    function validator_assert_t_enum$_Status_$1951(value) {\n        if iszero(lt(value, 5)) { panic_error_0x21() }\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_bool(value) {\n        if iszero(eq(value, cleanup_t_bool(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_bytes4(value) {\n        if iszero(eq(value, cleanup_t_bytes4(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_enum$_Status_$1951(value) {\n        if iszero(lt(value, 5)) { revert(0, 0) }\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
       "id": 16,
       "language": "Yul",
       "name": "#utility.yul"
@@ -24334,7 +24334,7 @@
         1673
       ],
       "Artifact": [
-        2202
+        2199
       ],
       "Context": [
         1695
@@ -24361,12 +24361,12 @@
         104
       ]
     },
-    "id": 2203,
+    "id": 2200,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1942,
+        "id": 1939,
         "literals": [
           "solidity",
           "0.8",
@@ -24378,10 +24378,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
         "file": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
-        "id": 1943,
+        "id": 1940,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2203,
+        "scope": 2200,
         "sourceUnit": 1201,
         "src": "61:59:10",
         "symbolAliases": [],
@@ -24390,10 +24390,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/access/Ownable.sol",
         "file": "@openzeppelin/contracts/access/Ownable.sol",
-        "id": 1944,
+        "id": 1941,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 2203,
+        "scope": 2200,
         "sourceUnit": 105,
         "src": "122:52:10",
         "symbolAliases": [],
@@ -24404,25 +24404,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1945,
+              "id": 1942,
               "name": "ERC1155",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1200,
               "src": "199:7:10"
             },
-            "id": 1946,
+            "id": 1943,
             "nodeType": "InheritanceSpecifier",
             "src": "199:7:10"
           },
           {
             "baseName": {
-              "id": 1947,
+              "id": 1944,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 104,
               "src": "208:7:10"
             },
-            "id": 1948,
+            "id": 1945,
             "nodeType": "InheritanceSpecifier",
             "src": "208:7:10"
           }
@@ -24430,9 +24430,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 2202,
+        "id": 2199,
         "linearizedBaseContracts": [
-          2202,
+          2199,
           104,
           1200,
           1378,
@@ -24447,38 +24447,38 @@
         "nodes": [
           {
             "canonicalName": "Artifact.Status",
-            "id": 1954,
+            "id": 1951,
             "members": [
               {
-                "id": 1949,
+                "id": 1946,
                 "name": "Created",
                 "nameLocation": "247:7:10",
                 "nodeType": "EnumValue",
                 "src": "247:7:10"
               },
               {
-                "id": 1950,
+                "id": 1947,
                 "name": "Hodl",
                 "nameLocation": "265:4:10",
                 "nodeType": "EnumValue",
                 "src": "265:4:10"
               },
               {
-                "id": 1951,
+                "id": 1948,
                 "name": "Staked",
                 "nameLocation": "280:6:10",
                 "nodeType": "EnumValue",
                 "src": "280:6:10"
               },
               {
-                "id": 1952,
+                "id": 1949,
                 "name": "Verified",
                 "nameLocation": "297:8:10",
                 "nodeType": "EnumValue",
                 "src": "297:8:10"
               },
               {
-                "id": 1953,
+                "id": 1950,
                 "name": "Paused",
                 "nameLocation": "316:6:10",
                 "nodeType": "EnumValue",
@@ -24493,12 +24493,12 @@
           {
             "constant": false,
             "functionSelector": "a3f4df7e",
-            "id": 1956,
+            "id": 1953,
             "mutability": "mutable",
             "name": "NAME",
             "nameLocation": "351:4:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "337:18:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24507,7 +24507,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 1955,
+              "id": 1952,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "337:6:10",
@@ -24520,12 +24520,12 @@
           },
           {
             "constant": false,
-            "id": 1958,
+            "id": 1955,
             "mutability": "mutable",
             "name": "PRICE",
             "nameLocation": "375:5:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "362:18:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24534,7 +24534,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1957,
+              "id": 1954,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "362:4:10",
@@ -24547,33 +24547,33 @@
           },
           {
             "constant": false,
-            "id": 1961,
+            "id": 1958,
             "mutability": "mutable",
             "name": "STATUS",
             "nameLocation": "402:6:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "387:21:10",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Status_$1954",
+              "typeIdentifier": "t_enum$_Status_$1951",
               "typeString": "enum Artifact.Status"
             },
             "typeName": {
-              "id": 1960,
+              "id": 1957,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 1959,
+                "id": 1956,
                 "name": "Status",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 1954,
+                "referencedDeclaration": 1951,
                 "src": "387:6:10"
               },
-              "referencedDeclaration": 1954,
+              "referencedDeclaration": 1951,
               "src": "387:6:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Status_$1954",
+                "typeIdentifier": "t_enum$_Status_$1951",
                 "typeString": "enum Artifact.Status"
               }
             },
@@ -24582,12 +24582,12 @@
           {
             "constant": false,
             "functionSelector": "b3cea217",
-            "id": 1963,
+            "id": 1960,
             "mutability": "mutable",
             "name": "ID",
             "nameLocation": "427:2:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "415:14:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24596,7 +24596,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1962,
+              "id": 1959,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "415:4:10",
@@ -24610,12 +24610,12 @@
           {
             "constant": false,
             "functionSelector": "d1789176",
-            "id": 1965,
+            "id": 1962,
             "mutability": "mutable",
             "name": "AMOUNT",
             "nameLocation": "448:6:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "436:18:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24624,7 +24624,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1964,
+              "id": 1961,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "436:4:10",
@@ -24637,12 +24637,12 @@
           },
           {
             "constant": false,
-            "id": 1967,
+            "id": 1964,
             "mutability": "mutable",
             "name": "MARKETX",
             "nameLocation": "477:7:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "461:23:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24651,7 +24651,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 1966,
+              "id": 1963,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "461:7:10",
@@ -24666,12 +24666,12 @@
           {
             "constant": false,
             "functionSelector": "74fa687a",
-            "id": 1970,
+            "id": 1967,
             "mutability": "mutable",
             "name": "LEDGER",
             "nameLocation": "508:6:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "491:23:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24681,7 +24681,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 1968,
+                "id": 1965,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "491:7:10",
@@ -24691,7 +24691,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 1969,
+              "id": 1966,
               "nodeType": "ArrayTypeName",
               "src": "491:9:10",
               "typeDescriptions": {
@@ -24703,12 +24703,12 @@
           },
           {
             "constant": false,
-            "id": 1973,
+            "id": 1970,
             "mutability": "mutable",
             "name": "N_LEDGER",
             "nameLocation": "534:8:10",
             "nodeType": "VariableDeclaration",
-            "scope": 2202,
+            "scope": 2199,
             "src": "521:25:10",
             "stateVariable": true,
             "storageLocation": "default",
@@ -24717,7 +24717,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 1971,
+              "id": 1968,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "521:4:10",
@@ -24728,7 +24728,7 @@
             },
             "value": {
               "hexValue": "30",
-              "id": 1972,
+              "id": 1969,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -24746,23 +24746,23 @@
           },
           {
             "body": {
-              "id": 2032,
+              "id": 2029,
               "nodeType": "Block",
               "src": "702:261:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 1995,
+                    "id": 1992,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1993,
+                      "id": 1990,
                       "name": "NAME",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1956,
+                      "referencedDeclaration": 1953,
                       "src": "713:4:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -24772,11 +24772,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1994,
+                      "id": 1991,
                       "name": "_name",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1977,
+                      "referencedDeclaration": 1974,
                       "src": "720:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -24789,23 +24789,23 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 1996,
+                  "id": 1993,
                   "nodeType": "ExpressionStatement",
                   "src": "713:12:10"
                 },
                 {
                   "expression": {
-                    "id": 1999,
+                    "id": 1996,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 1997,
+                      "id": 1994,
                       "name": "MARKETX",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1967,
+                      "referencedDeclaration": 1964,
                       "src": "736:7:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -24815,11 +24815,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 1998,
+                      "id": 1995,
                       "name": "_marketX",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1987,
+                      "referencedDeclaration": 1984,
                       "src": "746:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -24832,23 +24832,23 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 2000,
+                  "id": 1997,
                   "nodeType": "ExpressionStatement",
                   "src": "736:18:10"
                 },
                 {
                   "expression": {
-                    "id": 2003,
+                    "id": 2000,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2001,
+                      "id": 1998,
                       "name": "AMOUNT",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1965,
+                      "referencedDeclaration": 1962,
                       "src": "765:6:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24858,11 +24858,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 2002,
+                      "id": 1999,
                       "name": "_amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1981,
+                      "referencedDeclaration": 1978,
                       "src": "774:7:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24875,23 +24875,23 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2004,
+                  "id": 2001,
                   "nodeType": "ExpressionStatement",
                   "src": "765:16:10"
                 },
                 {
                   "expression": {
-                    "id": 2007,
+                    "id": 2004,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2005,
+                      "id": 2002,
                       "name": "PRICE",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1958,
+                      "referencedDeclaration": 1955,
                       "src": "792:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24901,11 +24901,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 2006,
+                      "id": 2003,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1983,
+                      "referencedDeclaration": 1980,
                       "src": "800:6:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24918,23 +24918,23 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2008,
+                  "id": 2005,
                   "nodeType": "ExpressionStatement",
                   "src": "792:14:10"
                 },
                 {
                   "expression": {
-                    "id": 2011,
+                    "id": 2008,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2009,
+                      "id": 2006,
                       "name": "ID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1963,
+                      "referencedDeclaration": 1960,
                       "src": "817:2:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24944,11 +24944,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 2010,
+                      "id": 2007,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1979,
+                      "referencedDeclaration": 1976,
                       "src": "822:3:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -24961,7 +24961,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2012,
+                  "id": 2009,
                   "nodeType": "ExpressionStatement",
                   "src": "817:8:10"
                 },
@@ -24969,11 +24969,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2016,
+                        "id": 2013,
                         "name": "_creator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1985,
+                        "referencedDeclaration": 1982,
                         "src": "848:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -24989,18 +24989,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 2013,
+                        "id": 2010,
                         "name": "LEDGER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1970,
+                        "referencedDeclaration": 1967,
                         "src": "836:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 2015,
+                      "id": 2012,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -25013,7 +25013,7 @@
                         "typeString": "function (address[] storage pointer,address)"
                       }
                     },
-                    "id": 2017,
+                    "id": 2014,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25028,13 +25028,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2018,
+                  "id": 2015,
                   "nodeType": "ExpressionStatement",
                   "src": "836:21:10"
                 },
                 {
                   "expression": {
-                    "id": 2020,
+                    "id": 2017,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25044,11 +25044,11 @@
                     "prefix": false,
                     "src": "868:10:10",
                     "subExpression": {
-                      "id": 2019,
+                      "id": 2016,
                       "name": "N_LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1973,
+                      "referencedDeclaration": 1970,
                       "src": "868:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -25060,26 +25060,26 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2021,
+                  "id": 2018,
                   "nodeType": "ExpressionStatement",
                   "src": "868:10:10"
                 },
                 {
                   "expression": {
-                    "id": 2025,
+                    "id": 2022,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2022,
+                      "id": 2019,
                       "name": "STATUS",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
+                      "referencedDeclaration": 1958,
                       "src": "889:6:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
@@ -25087,38 +25087,38 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 2023,
+                        "id": 2020,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1954,
+                        "referencedDeclaration": 1951,
                         "src": "898:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$1954_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$1951_$",
                           "typeString": "type(enum Artifact.Status)"
                         }
                       },
-                      "id": 2024,
+                      "id": 2021,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "Created",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1949,
+                      "referencedDeclaration": 1946,
                       "src": "898:14:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
                     "src": "889:23:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
-                  "id": 2026,
+                  "id": 2023,
                   "nodeType": "ExpressionStatement",
                   "src": "889:23:10"
                 },
@@ -25126,11 +25126,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2028,
+                        "id": 2025,
                         "name": "_marketX",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1987,
+                        "referencedDeclaration": 1984,
                         "src": "941:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -25139,7 +25139,7 @@
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 2029,
+                        "id": 2026,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -25165,7 +25165,7 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 2027,
+                      "id": 2024,
                       "name": "setApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -25176,7 +25176,7 @@
                         "typeString": "function (address,bool)"
                       }
                     },
-                    "id": 2030,
+                    "id": 2027,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25191,24 +25191,24 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2031,
+                  "id": 2028,
                   "nodeType": "ExpressionStatement",
                   "src": "923:32:10"
                 }
               ]
             },
-            "id": 2033,
+            "id": 2030,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
               {
                 "arguments": [
                   {
-                    "id": 1990,
+                    "id": 1987,
                     "name": "_uri",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1975,
+                    "referencedDeclaration": 1972,
                     "src": "689:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -25216,10 +25216,10 @@
                     }
                   }
                 ],
-                "id": 1991,
+                "id": 1988,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 1989,
+                  "id": 1986,
                   "name": "ERC1155",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 1200,
@@ -25233,17 +25233,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1988,
+              "id": 1985,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1975,
+                  "id": 1972,
                   "mutability": "mutable",
                   "name": "_uri",
                   "nameLocation": "581:4:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "567:18:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -25252,7 +25252,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1974,
+                    "id": 1971,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "567:6:10",
@@ -25265,12 +25265,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1977,
+                  "id": 1974,
                   "mutability": "mutable",
                   "name": "_name",
                   "nameLocation": "601:5:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "587:19:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -25279,7 +25279,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1976,
+                    "id": 1973,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "587:6:10",
@@ -25292,12 +25292,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1979,
+                  "id": 1976,
                   "mutability": "mutable",
                   "name": "_id",
                   "nameLocation": "613:3:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "608:8:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25306,7 +25306,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1978,
+                    "id": 1975,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "608:4:10",
@@ -25319,12 +25319,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1981,
+                  "id": 1978,
                   "mutability": "mutable",
                   "name": "_amount",
                   "nameLocation": "623:7:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "618:12:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25333,7 +25333,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1980,
+                    "id": 1977,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "618:4:10",
@@ -25346,12 +25346,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1983,
+                  "id": 1980,
                   "mutability": "mutable",
                   "name": "_price",
                   "nameLocation": "637:6:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "632:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25360,7 +25360,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1982,
+                    "id": 1979,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "632:4:10",
@@ -25373,12 +25373,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1985,
+                  "id": 1982,
                   "mutability": "mutable",
                   "name": "_creator",
                   "nameLocation": "653:8:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "645:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25387,7 +25387,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1984,
+                    "id": 1981,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "645:7:10",
@@ -25401,12 +25401,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 1987,
+                  "id": 1984,
                   "mutability": "mutable",
                   "name": "_marketX",
                   "nameLocation": "671:8:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2033,
+                  "scope": 2030,
                   "src": "663:16:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25415,7 +25415,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1986,
+                    "id": 1983,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "663:7:10",
@@ -25431,12 +25431,12 @@
               "src": "566:114:10"
             },
             "returnParameters": {
-              "id": 1992,
+              "id": 1989,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "702:0:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "555:408:10",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -25444,7 +25444,7 @@
           },
           {
             "body": {
-              "id": 2044,
+              "id": 2041,
               "nodeType": "Block",
               "src": "993:87:10",
               "statements": [
@@ -25456,14 +25456,14 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 2039,
+                        "id": 2036,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "expression": {
-                            "id": 2036,
+                            "id": 2033,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -25474,7 +25474,7 @@
                               "typeString": "msg"
                             }
                           },
-                          "id": 2037,
+                          "id": 2034,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -25490,11 +25490,11 @@
                         "nodeType": "BinaryOperation",
                         "operator": "==",
                         "rightExpression": {
-                          "id": 2038,
+                          "id": 2035,
                           "name": "MARKETX",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1967,
+                          "referencedDeclaration": 1964,
                           "src": "1026:7:10",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -25509,7 +25509,7 @@
                       },
                       {
                         "hexValue": "41727469666163743a204f6e6c79204d61726b657458",
-                        "id": 2040,
+                        "id": 2037,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -25535,7 +25535,7 @@
                           "typeString": "literal_string \"Artifact: Only MarketX\""
                         }
                       ],
-                      "id": 2035,
+                      "id": 2032,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -25549,7 +25549,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 2041,
+                    "id": 2038,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25564,23 +25564,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2042,
+                  "id": 2039,
                   "nodeType": "ExpressionStatement",
                   "src": "1004:55:10"
                 },
                 {
-                  "id": 2043,
+                  "id": 2040,
                   "nodeType": "PlaceholderStatement",
                   "src": "1070:1:10"
                 }
               ]
             },
-            "id": 2045,
+            "id": 2042,
             "name": "onlyMarketX",
             "nameLocation": "980:11:10",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 2034,
+              "id": 2031,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "991:2:10"
@@ -25591,7 +25591,7 @@
           },
           {
             "body": {
-              "id": 2073,
+              "id": 2070,
               "nodeType": "Block",
               "src": "1134:121:10",
               "statements": [
@@ -25599,11 +25599,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2055,
+                        "id": 2052,
                         "name": "_to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2047,
+                        "referencedDeclaration": 2044,
                         "src": "1157:3:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -25619,18 +25619,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 2052,
+                        "id": 2049,
                         "name": "LEDGER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1970,
+                        "referencedDeclaration": 1967,
                         "src": "1145:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 2054,
+                      "id": 2051,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -25643,7 +25643,7 @@
                         "typeString": "function (address[] storage pointer,address)"
                       }
                     },
-                    "id": 2056,
+                    "id": 2053,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25658,13 +25658,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2057,
+                  "id": 2054,
                   "nodeType": "ExpressionStatement",
                   "src": "1145:16:10"
                 },
                 {
                   "expression": {
-                    "id": 2059,
+                    "id": 2056,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25674,11 +25674,11 @@
                     "prefix": false,
                     "src": "1172:10:10",
                     "subExpression": {
-                      "id": 2058,
+                      "id": 2055,
                       "name": "N_LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1973,
+                      "referencedDeclaration": 1970,
                       "src": "1172:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -25690,26 +25690,26 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2060,
+                  "id": 2057,
                   "nodeType": "ExpressionStatement",
                   "src": "1172:10:10"
                 },
                 {
                   "expression": {
-                    "id": 2064,
+                    "id": 2061,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2061,
+                      "id": 2058,
                       "name": "STATUS",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
+                      "referencedDeclaration": 1958,
                       "src": "1193:6:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
@@ -25717,38 +25717,38 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 2062,
+                        "id": 2059,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1954,
+                        "referencedDeclaration": 1951,
                         "src": "1202:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$1954_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$1951_$",
                           "typeString": "type(enum Artifact.Status)"
                         }
                       },
-                      "id": 2063,
+                      "id": 2060,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "Hodl",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1950,
+                      "referencedDeclaration": 1947,
                       "src": "1202:11:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
                     "src": "1193:20:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
-                  "id": 2065,
+                  "id": 2062,
                   "nodeType": "ExpressionStatement",
                   "src": "1193:20:10"
                 },
@@ -25756,11 +25756,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2067,
+                        "id": 2064,
                         "name": "_to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2047,
+                        "referencedDeclaration": 2044,
                         "src": "1230:3:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -25768,11 +25768,11 @@
                         }
                       },
                       {
-                        "id": 2068,
+                        "id": 2065,
                         "name": "ID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
+                        "referencedDeclaration": 1960,
                         "src": "1234:2:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -25780,11 +25780,11 @@
                         }
                       },
                       {
-                        "id": 2069,
+                        "id": 2066,
                         "name": "AMOUNT",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1965,
+                        "referencedDeclaration": 1962,
                         "src": "1237:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -25793,7 +25793,7 @@
                       },
                       {
                         "hexValue": "",
-                        "id": 2070,
+                        "id": 2067,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -25827,7 +25827,7 @@
                           "typeString": "literal_string \"\""
                         }
                       ],
-                      "id": 2066,
+                      "id": 2063,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -25838,7 +25838,7 @@
                         "typeString": "function (address,uint256,uint256,bytes memory)"
                       }
                     },
-                    "id": 2071,
+                    "id": 2068,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -25853,25 +25853,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2072,
+                  "id": 2069,
                   "nodeType": "ExpressionStatement",
                   "src": "1224:23:10"
                 }
               ]
             },
             "functionSelector": "6a627842",
-            "id": 2074,
+            "id": 2071,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2050,
+                "id": 2047,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2049,
+                  "id": 2046,
                   "name": "onlyMarketX",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2045,
+                  "referencedDeclaration": 2042,
                   "src": "1122:11:10"
                 },
                 "nodeType": "ModifierInvocation",
@@ -25882,17 +25882,17 @@
             "nameLocation": "1097:4:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2048,
+              "id": 2045,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2047,
+                  "id": 2044,
                   "mutability": "mutable",
                   "name": "_to",
                   "nameLocation": "1110:3:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2074,
+                  "scope": 2071,
                   "src": "1102:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -25901,7 +25901,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2046,
+                    "id": 2043,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1102:7:10",
@@ -25917,12 +25917,12 @@
               "src": "1101:13:10"
             },
             "returnParameters": {
-              "id": 2051,
+              "id": 2048,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1134:0:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1088:167:10",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -25930,23 +25930,23 @@
           },
           {
             "body": {
-              "id": 2108,
+              "id": 2105,
               "nodeType": "Block",
               "src": "1317:188:10",
               "statements": [
                 {
                   "assignments": [
-                    2082
+                    2079
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 2082,
+                      "id": 2079,
                       "mutability": "mutable",
                       "name": "hodler",
                       "nameLocation": "1336:6:10",
                       "nodeType": "VariableDeclaration",
-                      "scope": 2108,
+                      "scope": 2105,
                       "src": "1328:14:10",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -25955,7 +25955,7 @@
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 2081,
+                        "id": 2078,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "1328:7:10",
@@ -25968,23 +25968,23 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 2085,
+                  "id": 2082,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 2083,
+                      "id": 2080,
                       "name": "getHodler",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2131,
+                      "referencedDeclaration": 2128,
                       "src": "1345:9:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                         "typeString": "function () view returns (address)"
                       }
                     },
-                    "id": 2084,
+                    "id": 2081,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -26006,11 +26006,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2087,
+                        "id": 2084,
                         "name": "hodler",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2082,
+                        "referencedDeclaration": 2079,
                         "src": "1384:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -26018,11 +26018,11 @@
                         }
                       },
                       {
-                        "id": 2088,
+                        "id": 2085,
                         "name": "_buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2076,
+                        "referencedDeclaration": 2073,
                         "src": "1392:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -26030,11 +26030,11 @@
                         }
                       },
                       {
-                        "id": 2089,
+                        "id": 2086,
                         "name": "ID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
+                        "referencedDeclaration": 1960,
                         "src": "1400:2:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26042,11 +26042,11 @@
                         }
                       },
                       {
-                        "id": 2090,
+                        "id": 2087,
                         "name": "AMOUNT",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1965,
+                        "referencedDeclaration": 1962,
                         "src": "1404:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26055,7 +26055,7 @@
                       },
                       {
                         "hexValue": "",
-                        "id": 2091,
+                        "id": 2088,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -26093,7 +26093,7 @@
                           "typeString": "literal_string \"\""
                         }
                       ],
-                      "id": 2086,
+                      "id": 2083,
                       "name": "safeTransferFrom",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -26104,7 +26104,7 @@
                         "typeString": "function (address,address,uint256,uint256,bytes memory)"
                       }
                     },
-                    "id": 2092,
+                    "id": 2089,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -26119,7 +26119,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2093,
+                  "id": 2090,
                   "nodeType": "ExpressionStatement",
                   "src": "1367:48:10"
                 },
@@ -26127,11 +26127,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 2097,
+                        "id": 2094,
                         "name": "_buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2076,
+                        "referencedDeclaration": 2073,
                         "src": "1438:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -26147,18 +26147,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 2094,
+                        "id": 2091,
                         "name": "LEDGER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1970,
+                        "referencedDeclaration": 1967,
                         "src": "1426:6:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 2096,
+                      "id": 2093,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -26171,7 +26171,7 @@
                         "typeString": "function (address[] storage pointer,address)"
                       }
                     },
-                    "id": 2098,
+                    "id": 2095,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -26186,26 +26186,26 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2099,
+                  "id": 2096,
                   "nodeType": "ExpressionStatement",
                   "src": "1426:19:10"
                 },
                 {
                   "expression": {
-                    "id": 2103,
+                    "id": 2100,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2100,
+                      "id": 2097,
                       "name": "STATUS",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
+                      "referencedDeclaration": 1958,
                       "src": "1456:6:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
@@ -26213,44 +26213,44 @@
                     "operator": "=",
                     "rightHandSide": {
                       "expression": {
-                        "id": 2101,
+                        "id": 2098,
                         "name": "Status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1954,
+                        "referencedDeclaration": 1951,
                         "src": "1465:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_Status_$1954_$",
+                          "typeIdentifier": "t_type$_t_enum$_Status_$1951_$",
                           "typeString": "type(enum Artifact.Status)"
                         }
                       },
-                      "id": 2102,
+                      "id": 2099,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "lValueRequested": false,
                       "memberName": "Hodl",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1950,
+                      "referencedDeclaration": 1947,
                       "src": "1465:11:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
                     "src": "1456:20:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
-                  "id": 2104,
+                  "id": 2101,
                   "nodeType": "ExpressionStatement",
                   "src": "1456:20:10"
                 },
                 {
                   "expression": {
-                    "id": 2106,
+                    "id": 2103,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -26260,11 +26260,11 @@
                     "prefix": false,
                     "src": "1487:10:10",
                     "subExpression": {
-                      "id": 2105,
+                      "id": 2102,
                       "name": "N_LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1973,
+                      "referencedDeclaration": 1970,
                       "src": "1487:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -26276,25 +26276,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 2107,
+                  "id": 2104,
                   "nodeType": "ExpressionStatement",
                   "src": "1487:10:10"
                 }
               ]
             },
             "functionSelector": "1a695230",
-            "id": 2109,
+            "id": 2106,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2079,
+                "id": 2076,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2078,
+                  "id": 2075,
                   "name": "onlyMarketX",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2045,
+                  "referencedDeclaration": 2042,
                   "src": "1306:11:10"
                 },
                 "nodeType": "ModifierInvocation",
@@ -26305,17 +26305,17 @@
             "nameLocation": "1274:8:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2077,
+              "id": 2074,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2076,
+                  "id": 2073,
                   "mutability": "mutable",
                   "name": "_buyer",
                   "nameLocation": "1291:6:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2109,
+                  "scope": 2106,
                   "src": "1283:14:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -26324,7 +26324,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2075,
+                    "id": 2072,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1283:7:10",
@@ -26340,12 +26340,12 @@
               "src": "1282:16:10"
             },
             "returnParameters": {
-              "id": 2080,
+              "id": 2077,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1317:0:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1265:240:10",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -26353,7 +26353,7 @@
           },
           {
             "body": {
-              "id": 2130,
+              "id": 2127,
               "nodeType": "Block",
               "src": "1564:113:10",
               "statements": [
@@ -26363,17 +26363,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 2116,
+                    "id": 2113,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 2114,
+                      "id": 2111,
                       "name": "N_LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1973,
+                      "referencedDeclaration": 1970,
                       "src": "1578:8:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -26384,7 +26384,7 @@
                     "operator": "==",
                     "rightExpression": {
                       "hexValue": "31",
-                      "id": 2115,
+                      "id": 2112,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -26404,11 +26404,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 2123,
+                  "id": 2120,
                   "nodeType": "IfStatement",
                   "src": "1575:59:10",
                   "trueBody": {
-                    "id": 2122,
+                    "id": 2119,
                     "nodeType": "Block",
                     "src": "1590:44:10",
                     "statements": [
@@ -26417,7 +26417,7 @@
                           "arguments": [
                             {
                               "hexValue": "30",
-                              "id": 2119,
+                              "id": 2116,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -26439,7 +26439,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 2118,
+                            "id": 2115,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -26451,14 +26451,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 2117,
+                              "id": 2114,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "1612:7:10",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 2120,
+                          "id": 2117,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -26473,8 +26473,8 @@
                             "typeString": "address"
                           }
                         },
-                        "functionReturnParameters": 2113,
-                        "id": 2121,
+                        "functionReturnParameters": 2110,
+                        "id": 2118,
                         "nodeType": "Return",
                         "src": "1605:17:10"
                       }
@@ -26484,34 +26484,34 @@
                 {
                   "expression": {
                     "baseExpression": {
-                      "id": 2124,
+                      "id": 2121,
                       "name": "LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1970,
+                      "referencedDeclaration": 1967,
                       "src": "1651:6:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_array$_t_address_$dyn_storage",
                         "typeString": "address[] storage ref"
                       }
                     },
-                    "id": 2128,
+                    "id": 2125,
                     "indexExpression": {
                       "commonType": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 2127,
+                      "id": 2124,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 2125,
+                        "id": 2122,
                         "name": "N_LEDGER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1973,
+                        "referencedDeclaration": 1970,
                         "src": "1658:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26522,7 +26522,7 @@
                       "operator": "-",
                       "rightExpression": {
                         "hexValue": "31",
-                        "id": 2126,
+                        "id": 2123,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -26553,15 +26553,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 2113,
-                  "id": 2129,
+                  "functionReturnParameters": 2110,
+                  "id": 2126,
                   "nodeType": "Return",
                   "src": "1644:25:10"
                 }
               ]
             },
             "functionSelector": "9fade8a1",
-            "id": 2131,
+            "id": 2128,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -26569,23 +26569,23 @@
             "nameLocation": "1523:9:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2110,
+              "id": 2107,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1532:2:10"
             },
             "returnParameters": {
-              "id": 2113,
+              "id": 2110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2112,
+                  "id": 2109,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2131,
+                  "scope": 2128,
                   "src": "1555:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -26594,7 +26594,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2111,
+                    "id": 2108,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1555:7:10",
@@ -26609,7 +26609,7 @@
               ],
               "src": "1554:9:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1514:163:10",
             "stateMutability": "view",
             "virtual": false,
@@ -26617,28 +26617,28 @@
           },
           {
             "body": {
-              "id": 2140,
+              "id": 2137,
               "nodeType": "Block",
               "src": "1736:35:10",
               "statements": [
                 {
                   "expression": {
                     "baseExpression": {
-                      "id": 2136,
+                      "id": 2133,
                       "name": "LEDGER",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1970,
+                      "referencedDeclaration": 1967,
                       "src": "1754:6:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_array$_t_address_$dyn_storage",
                         "typeString": "address[] storage ref"
                       }
                     },
-                    "id": 2138,
+                    "id": 2135,
                     "indexExpression": {
                       "hexValue": "30",
-                      "id": 2137,
+                      "id": 2134,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -26663,15 +26663,15 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 2135,
-                  "id": 2139,
+                  "functionReturnParameters": 2132,
+                  "id": 2136,
                   "nodeType": "Return",
                   "src": "1747:16:10"
                 }
               ]
             },
             "functionSelector": "0ee2cb10",
-            "id": 2141,
+            "id": 2138,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -26679,23 +26679,23 @@
             "nameLocation": "1694:10:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2132,
+              "id": 2129,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1704:2:10"
             },
             "returnParameters": {
-              "id": 2135,
+              "id": 2132,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2134,
+                  "id": 2131,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2141,
+                  "scope": 2138,
                   "src": "1727:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -26704,7 +26704,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2133,
+                    "id": 2130,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1727:7:10",
@@ -26719,7 +26719,7 @@
               ],
               "src": "1726:9:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1685:86:10",
             "stateMutability": "view",
             "virtual": false,
@@ -26727,68 +26727,68 @@
           },
           {
             "body": {
-              "id": 2153,
+              "id": 2150,
               "nodeType": "Block",
               "src": "1836:38:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 2151,
+                    "id": 2148,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 2149,
+                      "id": 2146,
                       "name": "STATUS",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1961,
+                      "referencedDeclaration": 1958,
                       "src": "1847:6:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 2150,
+                      "id": 2147,
                       "name": "_newStatus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2144,
+                      "referencedDeclaration": 2141,
                       "src": "1856:10:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Status_$1954",
+                        "typeIdentifier": "t_enum$_Status_$1951",
                         "typeString": "enum Artifact.Status"
                       }
                     },
                     "src": "1847:19:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
-                  "id": 2152,
+                  "id": 2149,
                   "nodeType": "ExpressionStatement",
                   "src": "1847:19:10"
                 }
               ]
             },
             "functionSelector": "2e49d78b",
-            "id": 2154,
+            "id": 2151,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2147,
+                "id": 2144,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2146,
+                  "id": 2143,
                   "name": "onlyMarketX",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2045,
+                  "referencedDeclaration": 2042,
                   "src": "1824:11:10"
                 },
                 "nodeType": "ModifierInvocation",
@@ -26799,38 +26799,38 @@
             "nameLocation": "1788:9:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2145,
+              "id": 2142,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2144,
+                  "id": 2141,
                   "mutability": "mutable",
                   "name": "_newStatus",
                   "nameLocation": "1805:10:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2154,
+                  "scope": 2151,
                   "src": "1798:17:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$1954",
+                    "typeIdentifier": "t_enum$_Status_$1951",
                     "typeString": "enum Artifact.Status"
                   },
                   "typeName": {
-                    "id": 2143,
+                    "id": 2140,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2142,
+                      "id": 2139,
                       "name": "Status",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1954,
+                      "referencedDeclaration": 1951,
                       "src": "1798:6:10"
                     },
-                    "referencedDeclaration": 1954,
+                    "referencedDeclaration": 1951,
                     "src": "1798:6:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
@@ -26840,12 +26840,12 @@
               "src": "1797:19:10"
             },
             "returnParameters": {
-              "id": 2148,
+              "id": 2145,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1836:0:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1779:95:10",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -26853,43 +26853,43 @@
           },
           {
             "body": {
-              "id": 2164,
+              "id": 2161,
               "nodeType": "Block",
               "src": "1943:32:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 2162,
+                    "id": 2159,
                     "name": "STATUS",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1961,
+                    "referencedDeclaration": 1958,
                     "src": "1961:6:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
-                  "functionReturnParameters": 2161,
-                  "id": 2163,
+                  "functionReturnParameters": 2158,
+                  "id": 2160,
                   "nodeType": "Return",
                   "src": "1954:13:10"
                 }
               ]
             },
             "functionSelector": "4e69d560",
-            "id": 2165,
+            "id": 2162,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 2157,
+                "id": 2154,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 2156,
+                  "id": 2153,
                   "name": "onlyMarketX",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 2045,
+                  "referencedDeclaration": 2042,
                   "src": "1911:11:10"
                 },
                 "nodeType": "ModifierInvocation",
@@ -26900,44 +26900,44 @@
             "nameLocation": "1892:9:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2155,
+              "id": 2152,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1901:2:10"
             },
             "returnParameters": {
-              "id": 2161,
+              "id": 2158,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2160,
+                  "id": 2157,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2165,
+                  "scope": 2162,
                   "src": "1936:6:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$1954",
+                    "typeIdentifier": "t_enum$_Status_$1951",
                     "typeString": "enum Artifact.Status"
                   },
                   "typeName": {
-                    "id": 2159,
+                    "id": 2156,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2158,
+                      "id": 2155,
                       "name": "Status",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1954,
+                      "referencedDeclaration": 1951,
                       "src": "1936:6:10"
                     },
-                    "referencedDeclaration": 1954,
+                    "referencedDeclaration": 1951,
                     "src": "1936:6:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
@@ -26946,7 +26946,7 @@
               ],
               "src": "1935:8:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1883:92:10",
             "stateMutability": "view",
             "virtual": false,
@@ -26954,7 +26954,7 @@
           },
           {
             "body": {
-              "id": 2183,
+              "id": 2180,
               "nodeType": "Block",
               "src": "2044:52:10",
               "statements": [
@@ -26962,11 +26962,11 @@
                   "expression": {
                     "components": [
                       {
-                        "id": 2177,
+                        "id": 2174,
                         "name": "ID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1963,
+                        "referencedDeclaration": 1960,
                         "src": "2063:2:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26974,11 +26974,11 @@
                         }
                       },
                       {
-                        "id": 2178,
+                        "id": 2175,
                         "name": "PRICE",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1958,
+                        "referencedDeclaration": 1955,
                         "src": "2066:5:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26986,11 +26986,11 @@
                         }
                       },
                       {
-                        "id": 2179,
+                        "id": 2176,
                         "name": "N_LEDGER",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1973,
+                        "referencedDeclaration": 1970,
                         "src": "2072:8:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -26998,19 +26998,19 @@
                         }
                       },
                       {
-                        "id": 2180,
+                        "id": 2177,
                         "name": "STATUS",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1961,
+                        "referencedDeclaration": 1958,
                         "src": "2081:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Status_$1954",
+                          "typeIdentifier": "t_enum$_Status_$1951",
                           "typeString": "enum Artifact.Status"
                         }
                       }
                     ],
-                    "id": 2181,
+                    "id": 2178,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -27019,19 +27019,19 @@
                     "nodeType": "TupleExpression",
                     "src": "2062:26:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$_t_uint256_$_t_enum$_Status_$1954_$",
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$_t_uint256_$_t_enum$_Status_$1951_$",
                       "typeString": "tuple(uint256,uint256,uint256,enum Artifact.Status)"
                     }
                   },
-                  "functionReturnParameters": 2176,
-                  "id": 2182,
+                  "functionReturnParameters": 2173,
+                  "id": 2179,
                   "nodeType": "Return",
                   "src": "2055:33:10"
                 }
               ]
             },
             "functionSelector": "3bc5de30",
-            "id": 2184,
+            "id": 2181,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -27039,23 +27039,23 @@
             "nameLocation": "1992:7:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2166,
+              "id": 2163,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1999:2:10"
             },
             "returnParameters": {
-              "id": 2176,
+              "id": 2173,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2168,
+                  "id": 2165,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2184,
+                  "scope": 2181,
                   "src": "2022:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -27064,7 +27064,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2167,
+                    "id": 2164,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2022:4:10",
@@ -27077,12 +27077,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 2170,
+                  "id": 2167,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2184,
+                  "scope": 2181,
                   "src": "2027:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -27091,10 +27091,37 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2169,
+                    "id": 2166,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2027:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2169,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2181,
+                  "src": "2032:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2168,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2032:4:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -27109,55 +27136,28 @@
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2184,
-                  "src": "2032:4:10",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 2171,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "2032:4:10",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 2175,
-                  "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 2184,
+                  "scope": 2181,
                   "src": "2037:6:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Status_$1954",
+                    "typeIdentifier": "t_enum$_Status_$1951",
                     "typeString": "enum Artifact.Status"
                   },
                   "typeName": {
-                    "id": 2174,
+                    "id": 2171,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2173,
+                      "id": 2170,
                       "name": "Status",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1954,
+                      "referencedDeclaration": 1951,
                       "src": "2037:6:10"
                     },
-                    "referencedDeclaration": 1954,
+                    "referencedDeclaration": 1951,
                     "src": "2037:6:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Status_$1954",
+                      "typeIdentifier": "t_enum$_Status_$1951",
                       "typeString": "enum Artifact.Status"
                     }
                   },
@@ -27166,7 +27166,7 @@
               ],
               "src": "2021:23:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "1983:113:10",
             "stateMutability": "view",
             "virtual": false,
@@ -27174,32 +27174,32 @@
           },
           {
             "body": {
-              "id": 2191,
+              "id": 2188,
               "nodeType": "Block",
               "src": "2149:31:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 2189,
+                    "id": 2186,
                     "name": "PRICE",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1958,
+                    "referencedDeclaration": 1955,
                     "src": "2167:5:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 2188,
-                  "id": 2190,
+                  "functionReturnParameters": 2185,
+                  "id": 2187,
                   "nodeType": "Return",
                   "src": "2160:12:10"
                 }
               ]
             },
             "functionSelector": "98d5fdca",
-            "id": 2192,
+            "id": 2189,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -27207,23 +27207,23 @@
             "nameLocation": "2113:8:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2185,
+              "id": 2182,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2121:2:10"
             },
             "returnParameters": {
-              "id": 2188,
+              "id": 2185,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2187,
+                  "id": 2184,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2192,
+                  "scope": 2189,
                   "src": "2144:4:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -27232,7 +27232,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 2186,
+                    "id": 2183,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2144:4:10",
@@ -27246,7 +27246,7 @@
               ],
               "src": "2143:6:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "2104:76:10",
             "stateMutability": "view",
             "virtual": false,
@@ -27254,32 +27254,32 @@
           },
           {
             "body": {
-              "id": 2200,
+              "id": 2197,
               "nodeType": "Block",
               "src": "2246:32:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 2198,
+                    "id": 2195,
                     "name": "LEDGER",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1970,
+                    "referencedDeclaration": 1967,
                     "src": "2264:6:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 2197,
-                  "id": 2199,
+                  "functionReturnParameters": 2194,
+                  "id": 2196,
                   "nodeType": "Return",
                   "src": "2257:13:10"
                 }
               ]
             },
             "functionSelector": "f36f235d",
-            "id": 2201,
+            "id": 2198,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -27287,23 +27287,23 @@
             "nameLocation": "2197:9:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2193,
+              "id": 2190,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2206:2:10"
             },
             "returnParameters": {
-              "id": 2197,
+              "id": 2194,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2196,
+                  "id": 2193,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2201,
+                  "scope": 2198,
                   "src": "2229:16:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -27313,7 +27313,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 2194,
+                      "id": 2191,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "2229:7:10",
@@ -27323,7 +27323,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 2195,
+                    "id": 2192,
                     "nodeType": "ArrayTypeName",
                     "src": "2229:9:10",
                     "typeDescriptions": {
@@ -27336,14 +27336,14 @@
               ],
               "src": "2228:18:10"
             },
-            "scope": 2202,
+            "scope": 2199,
             "src": "2188:90:10",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 2203,
+        "scope": 2200,
         "src": "178:2109:10",
         "usedErrors": []
       }
@@ -27356,7 +27356,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-01T20:51:29.767Z",
+  "updatedAt": "2022-11-16T10:00:59.778Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
