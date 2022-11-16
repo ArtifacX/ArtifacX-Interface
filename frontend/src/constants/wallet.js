@@ -10,7 +10,7 @@ export const SUPPORTED_WALLETS = {
   WALLET_CONNECT: {
     connector: walletconnect,
     name: "WalletConnect",
-    iconURL: "https://github.com/WalletConnect/walletconnect-assets/blob/master/png/circle/walletconnect-circle-white.png?raw=true",
+    iconURL: "https://static.opensea.io/logos/walletconnect-alternative.png",
     mobile: true,
   },
   WALLETLINK_CONNECT: {
