@@ -15,10 +15,13 @@ const AssetPage = () => {
 
   const { account, chainId } = useActiveWeb3React();
   const { address } = useParams();
+  console.log(address)
   const artifact = useArtifact(address);
 
   const nftsData = useSelector(state => state.nfts.nfts);
+  console.log(nftsData)
   const addresses = useSelector(state => state.nfts.addresses);
+  console.log(addresses)
   const itemIndex = addresses.indexOf(address);
 
   const [metadata, setMetadata] = useState();

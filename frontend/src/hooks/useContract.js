@@ -37,7 +37,6 @@ export function useMarketX(withSignerIfPossible) {
 }
 
 export function useArtifactory(withSignerIfPossible) {
-  console.log(ARTIFACTORY_ADDRESS[1337]);
   return useContract(ARTIFACTORY_ADDRESS, ARTIFACTORY_ABI.abi, withSignerIfPossible);
 }
 

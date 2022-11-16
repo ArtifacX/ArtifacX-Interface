@@ -33,88 +33,89 @@ const HomePage = () => {
   //   return addresses;
   // };
 
-  const getMetaData = async (tokenURI) => {
-    console.log("getting");
-    try {
-      const response = await axios.get(
-        "/getMetadata", { params: { tokenURI } }
-      )
-      console.log(response);
-      return response;
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // const getMetaData = async (tokenURI) => {
+  //   console.log("getting");
+  //   try {
+  //     const response = await axios.get(
+  //       "/getMetadata", { params: { tokenURI } }
+  //     )
+  //     console.log(response);
+  //     return response;
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
-  const allMetaData = async () => {
-    const data = [];
-    for (let i = 0; i < uris.length; i++) {
-      data[i] = await getMetaData(uris[i]);
-    }
-    return data;
-  }
-
-  useEffect(() => {
-    setIsLoading(true);
-    console.log("here");
-    async function loadURIs() {
-      if (factory && account) {
-        const urisFetch = await factory.getAddresses({});
-        console.log("fetched token uris from contract: ", urisFetch);
-        if (urisFetch.length > 0) {
-          const a = await factory?.getAddresses();
-          setURIs(urisFetch);
-          dispatch(nftsActions.loadURIS({ uris: urisFetch }));
-          dispatch(nftsActions.loadAddresses({ addresses: a }));
-          setAddresses(a);
-          let data = [];
-          for (let i = 0; i < urisFetch.length; i++) {
-            let d = await getMetaData(urisFetch[i]);
-            data.push(d);
-          }
-          data = await Promise.all(data);
-          console.log("data: ", data);
-          setMetadata(data);
-          dispatch(nftsActions.loadNfts({ nfts: data }));
-        }
-        setIsLoading(false);
-      }
-    }
-    loadURIs();
-  }, [factory, account]);
-
-  // const getDataFromPinata = async () => {
-  //   const a = await factory?.getAddresses();
-  //   setURIs(uris);
-  //   const metadata = await Promise.all(
-  //     uris?.map(async (tokenURI) => {
-  //       const url = "getMetadata";
-  //       return axios.get(url, {
-  //         params: {
-  //           tokenURI,
-  //         },
-  //       });
-  //     })
-  //   );
-  //   const data = metadata.map(a => a.data);
-  //   // const a = await getAddresses();
-  //   dispatch(nftsActions.loadNfts({ nfts: data }));
-  //   dispatch(nftsActions.loadURIS({ uris: uris }));
-  //   dispatch(nftsActions.loadAddresses({ addresses: a }));
-  //   console.log(a);
-  //   setMetadata(metadata);
-  //   setAddresses(a);
-  //   return metadata;
-  // };
+  // const allMetaData = async () => {
+  //   const data = [];
+  //   for (let i = 0; i < uris.length; i++) {
+  //     data[i] = await getMetaData(uris[i]);
+  //   }
+  //   return data;
+  // }
 
   // useEffect(() => {
   //   setIsLoading(true);
-  //   if (factory && account) {
-
-  //     await getDataFromPinata();
-  //     setIsLoading(false);
+  //   console.log("here");
+  //   async function loadURIs() {
+  //     if (factory && account) {
+  //       const urisFetch = await factory.getAddresses({});
+  //       console.log("fetched token uris from contract: ", urisFetch);
+  //       if (urisFetch.length > 0) {
+  //         const a = await factory?.getAddresses();
+  //         setURIs(urisFetch);
+  //         dispatch(nftsActions.loadURIS({ uris: urisFetch }));
+  //         dispatch(nftsActions.loadAddresses({ addresses: a }));
+  //         setAddresses(a);
+  //         let data = [];
+  //         for (let i = 0; i < urisFetch.length; i++) {
+  //           let d = await getMetaData(urisFetch[i]);
+  //           data.push(d);
+  //         }
+  //         data = await Promise.all(data);
+  //         console.log("data: ", data);
+  //         setMetadata(data);
+  //         dispatch(nftsActions.loadNfts({ nfts: data }));
+  //       }
+  //       setIsLoading(false);
+  //     }
   //   }
+  //   loadURIs();
   // }, [factory, account]);
+
+  const getDataFromPinata = async () => {
+    const urisFetch = await factory?.getURIs();
+    setURIs(urisFetch);
+    const metadata = await Promise.all(
+      urisFetch?.map(async (tokenURI) => {
+        const url = "getMetadata";
+        return axios.get(url, {
+          params: {
+            tokenURI,
+          },
+        });
+      })
+    );
+    const data = metadata.map(a => a.data);
+    console.log(data);
+    const a = await factory.getAddresses();
+    console.log(a);
+    dispatch(nftsActions.loadNfts({ nfts: data }));
+    dispatch(nftsActions.loadURIS({ uris: urisFetch }));
+    dispatch(nftsActions.loadAddresses({ addresses: a }));
+    console.log(a);
+    setMetadata(metadata);
+    setAddresses(a);
+    return metadata;
+  };
+
+  useEffect(async () => {
+    setIsLoading(true);
+    if (factory && account) {
+      getDataFromPinata();
+      setIsLoading(false);
+    }
+  }, [factory, account]);
 
   return (
     <RouteGuard>
