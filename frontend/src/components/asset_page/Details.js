@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import styles from './Details.module.css';
 import Summary from './Summary';
 import Main from './Main';
-import History from './History';
 
 const Details = (props) => {
   return (

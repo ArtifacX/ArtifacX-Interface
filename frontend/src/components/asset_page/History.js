@@ -7,12 +7,12 @@ const History = (props) => {
   console.log(props.ledger)
   
   const rows = props.ledger.map((address, i) => {
-    if (i == 0) {
+    if (i === 0) {
       return (<tr key={address}>
         <td>📜 Creator</td>
         <td>{address}</td>
       </tr>);
-    } else if (i == 1) {
+    } else if (i === 1) {
       return (<tr key={address}>
         <td>🪙 Minter</td>
         <td>{address}</td>

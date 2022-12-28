@@ -2,29 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { useState } from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { UnsupportedChainIdError } from "@web3-react/core";
 import { addressShortner } from "../../utils";
 import Logo from "../../assets/images/logo.png";
 import Burger from "../../assets/images/burger.png";
 import styles from "./navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { useActiveWeb3React } from "../../hooks/useWeb3";
-import {
-  NETWORK_LABELS,
-  ALL_SUPPORTED_CHAIN_IDS,
-} from "../../constants/chains";
 import WalletModal from "../wallet_modal";
 import { Avatar, Tooltip } from "@mantine/core";
 
 const NavigationBar = () => {
 
   const location = useLocation();
-  const { account, error, deactivate } = useActiveWeb3React();
-  const [show, setShow] = useState(false);
+  const { account, deactivate } = useActiveWeb3React();
   const [opened, setOpened] = useState(false);
 
   const deactivateWallet = () => {
-    setShow(false);
     sessionStorage.setItem("disconnected","true");
     deactivate();
   };

@@ -36,26 +36,6 @@ const SpacedHorizontalContainer = styled.div`
   align-items: center;
 `;
 
-const BuyButton = styled.button`
-  padding: 10px 16px;
-  background-color: #fbbe01;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 700;
-  border: 3px solid transparent;
-  outline: none;
-  cursor: pointer;
-  transition: all 290ms ease-in-out;
-  border-radius: 8px;
-
-  &:hover {
-    background-color: transparent;
-    color: #fff;
-    border: 3px solid #fbbe01;
-  }
-`;
-
 const NikeLogo = styled.div`
   width: 100%;
   height: 30px;
@@ -88,7 +68,7 @@ const ShoesDetails = (props) => {
         <MediumText>ArtifacX</MediumText>
       </SpacedHorizontalContainer>
       <NikeLogo>
-        <img src={NikeImg} />
+        <img src={NikeImg} alt="Artifact img" />
       </NikeLogo>
     </DetailsContainer>
   );

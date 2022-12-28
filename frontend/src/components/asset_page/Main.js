@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Main.module.css";
 import { Card, Button } from 'react-bootstrap';
-import { Accordion } from "@mantine/core";
+// import { Accordion } from "@mantine/core";
 import { statusMap } from "../../utils/statusMap";
 import { useActiveWeb3React } from "../../hooks/useWeb3";
 import { useMarketX } from "../../hooks/useContract";
@@ -131,14 +131,13 @@ const Main = (props) => {
 
   useEffect( () => {
     setLoading(true);
-    console.log(props.contractDetails);
     const ledger = props.contractDetails.ledger;
     let isCreator = false;
     let isHodler = false;
-    if (ledger[0] == account) {
+    if (ledger[0] === account) {
       isCreator = true;
     }
-    if (ledger.length > 1 && ledger.slice(-1) == account) {
+    if (ledger.length > 1 && ledger[ledger.length-1] === account) {
       isHodler = true;
     }
     const res = statusMap(props.contractDetails.status, isCreator, isHodler);
@@ -146,7 +145,7 @@ const Main = (props) => {
     setApproved(props.contractDetails.approved);
     setStatus(res);
     setLoading(false);
-  }, [account]);
+  }, [account, props.contractDetails.ledger, props.contractDetails.approved, props.contractDetails.status]);
 
 
 
@@ -201,7 +200,6 @@ const Main = (props) => {
                       version="1.1"
                       viewBox="0 0 17 17"
                       xmlns="http://www.w3.org/2000/svg"
-
                     >
                       <g />
                       <path
@@ -217,7 +215,6 @@ const Main = (props) => {
                       version="1.1"
                       viewBox="0 0 17 17"
                       xmlns="http://www.w3.org/2000/svg"
-
                     >
                       <g />
                       <path

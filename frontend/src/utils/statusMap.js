@@ -8,6 +8,7 @@
 
 
 export const statusMap = (status,isCreator,isHodler) => {
+  console.log(`StatusMap : ${status}, ${isCreator}, ${isHodler}`)
   let res = undefined;
   if(isCreator){
     switch(status){

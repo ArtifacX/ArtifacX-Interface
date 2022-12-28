@@ -29,12 +29,12 @@ const AssetPage = () => {
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(async () => {
+  useEffect(() => {
     setLoading(true);
     async function fetchData() {
       let metadata;
       if (artifact && account) {
-        if (itemIndex == -1) {
+        if (itemIndex === -1) {
           metadata = await getMetadata(artifact);
           // setMetadata(metadata);
         } else {
@@ -51,7 +51,7 @@ const AssetPage = () => {
       }
     }
     fetchData();
-  }, [account, artifact]);
+  }, [account, artifact, chainId, itemIndex, nftsData]);
 
 
   return (

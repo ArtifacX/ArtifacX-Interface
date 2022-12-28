@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import NavigationBar from '../navbar';
 import Banner from './Banner';
 import Divider from './Divider';

@@ -9,7 +9,7 @@ import { SUPPORTED_WALLETS } from "../../constants/wallet";
 
 
 function WalletModal(props) {
-  const { account, activate, error, chainId } = useActiveWeb3React();
+  const { account, activate, error } = useActiveWeb3React();
 
   const activateConnector = (connector) => {
     if (connector) {
@@ -58,7 +58,7 @@ function WalletModal(props) {
             }}
           >
             <div>{option.name}</div>
-            {option.name == "Metamask" && (
+            {option.name === "Metamask" && (
               <div className={styles.tag}>Popular</div>
             )}
           </Col>

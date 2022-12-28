@@ -1,4 +1,3 @@
-import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3React as useWeb3ReactCore } from "@web3-react/core";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
@@ -14,7 +13,7 @@ export function useEagerConnect() {
   const disconnected = sessionStorage.getItem("disconnected");
   
   useEffect(() => {
-    if (!active && disconnected!="true") {
+    if (!active && disconnected !== "true") {
       injected.isAuthorized().then((isAuthorized) => {
         if (isAuthorized) {
           activate(injected, undefined, true).catch(() => {
@@ -31,8 +30,8 @@ export function useEagerConnect() {
         }
       });
       sessionStorage.setItem("disconnected","false");
-    } else if(disconnected=="true") setTried(true);
-  }, [activate, active]); // intentionally only running on mount (make sure it's only mounted once :))
+    } else if(disconnected === "true") setTried(true);
+  }, [activate, active, disconnected]); // intentionally only running on mount (make sure it's only mounted once :))
 
   // if the connection worked, wait until we get confirmation of that to flip the flag
   useEffect(() => {

@@ -67,8 +67,7 @@ const Summary = (props) => {
                 </Accordion.Item>
 
                 <Accordion.Item label="External Link">
-                  <a href={props.summary['link']} style={{textDecoration:'none'}} target="_blank">Link</a>
-                  
+                  <a href={props.summary['link']} style={{textDecoration:'none'}} target="_blank" rel="noreferrer">Link</a>
                 </Accordion.Item>
 
                 <Accordion.Item label="Details">

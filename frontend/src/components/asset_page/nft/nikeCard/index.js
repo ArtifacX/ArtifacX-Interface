@@ -2,7 +2,6 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-import AirJordanImg from "../../../../assets/images/air-jordan-transparent.png";
 import ShoesDetails  from "./shoesDetails";
 
 const CardWrapper = styled.div`
@@ -123,7 +122,7 @@ const NikeCard = (props) => {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.summary.imgURL} />
+              <img src={props.summary.imgURL} alt="Artifact img" />
             </Shoes>
           </ShoesWrapper>
           <NikeText>ARTI FACX</NikeText>

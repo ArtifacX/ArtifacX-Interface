@@ -25,23 +25,23 @@ const CreatePage = () => {
         }
       }
     }
-  },[account,loading])
+  },[account, loading, isWhitelisted, navigator])
 
   return (
     <RouteGuard>
       <NavigationBar />
       {
-        allowed==undefined && (<div className={styles.alert}>
+        allowed === undefined && (<div className={styles.alert}>
          <Notification color="red" title="Alert" disallowClose>
           Sign In with a WHITELISTED Account!
         </Notification>
       </div>)
       }
       {
-        allowed==true && <Form/>
+        allowed === true && <Form/>
       }
       {
-        allowed==false && (<div className={styles.alert}>
+        allowed === false && (<div className={styles.alert}>
          <Notification color="red" title="Alert" disallowClose>
           {account} isn't WHITELISTED!
         </Notification>

@@ -4,18 +4,14 @@ import { Button, Container } from "react-bootstrap";
 import axios from "axios";
 import {
   useArtifactory,
-  useCertificationRegistry,
 } from "../../hooks/useContract";
-import { useActiveWeb3React } from "../../hooks/useWeb3";
 import { utils } from "ethers";
-import { useCallback } from "react";
 import { useToasts } from "react-toast-notifications";
 import { LoadingOverlay } from "@mantine/core";
 
 const Form = () => {
   const { addToast } = useToasts();
   const [submitting, setSubmitting] = useState(false);
-  const { account } = useActiveWeb3React();
   const factory = useArtifactory();
 
   const uploadPinata = (data) => {
@@ -77,7 +73,7 @@ const Form = () => {
     };
 
     const response = await uploadPinata(data);
-    if (response.status != 200) {
+    if (response.status !== 200) {
       console.error("Could not pin to IPFS");
     } else {
       addToast("Successfully pinned data to IPFS", {
@@ -86,11 +82,6 @@ const Form = () => {
         autoDismissTimeout: 2000,
         placement: "bottom-right",
       });
-      // const data = {
-      //     hash : "QmbXUCR2xDBNnfUwPSG5qp2CA3X2dBcKitf4RGZQeZzirz",
-      //     price : utils.parseEther("2"),
-      //     name : "Airmax"
-      // }
       console.log(response);
       const data = {
           hash: response.data.IpfsHash,

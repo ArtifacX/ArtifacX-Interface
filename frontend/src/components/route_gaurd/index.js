@@ -1,7 +1,6 @@
 import {useActiveWeb3React, useEagerConnect} from "../../hooks/useWeb3";
 import React, {useEffect,useState} from "react";
 import {useNavigate} from "react-router-dom";
-import { useIsWhitelisted } from "../../hooks/useIsWhitelisted";
 import { UnsupportedChainIdError } from "@web3-react/core";
 
 export const RouteGuard = ({children}) => {
